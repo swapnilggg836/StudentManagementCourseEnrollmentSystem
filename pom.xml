@@ -7,6 +7,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- =========================
+         PROJECT INFORMATION
+         ========================= -->
     <groupId>org.giritechhub</groupId>
 
     <artifactId>student-management-course-enrollment-system</artifactId>
@@ -17,11 +20,13 @@
 
 
     <!-- =========================
-         SPRING MVC
+         DEPENDENCIES
          ========================= -->
-
     <dependencies>
 
+        <!-- =========================
+             SPRING MVC
+             ========================= -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -30,9 +35,28 @@
 
 
         <!-- =========================
-             SERVLET API
+             SPRING JDBC
              ========================= -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>6.2.11</version>
+        </dependency>
 
+
+        <!-- =========================
+             MYSQL JDBC DRIVER
+             ========================= -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.4.0</version>
+        </dependency>
+
+
+        <!-- =========================
+             JAKARTA SERVLET API
+             ========================= -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -44,7 +68,6 @@
         <!-- =========================
              JSP API
              ========================= -->
-
         <dependency>
             <groupId>jakarta.servlet.jsp</groupId>
             <artifactId>jakarta.servlet.jsp-api</artifactId>
@@ -56,7 +79,6 @@
         <!-- =========================
              JSTL API
              ========================= -->
-
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
@@ -67,7 +89,6 @@
         <!-- =========================
              JSTL IMPLEMENTATION
              ========================= -->
-
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
@@ -78,14 +99,15 @@
 
 
     <!-- =========================
-         BUILD
+         BUILD CONFIGURATION
          ========================= -->
-
     <build>
 
         <plugins>
 
-            <!-- Java Compiler -->
+            <!-- =========================
+                 JAVA 21 COMPILER
+                 ========================= -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
@@ -96,7 +118,9 @@
             </plugin>
 
 
-            <!-- WAR -->
+            <!-- =========================
+                 WAR PACKAGING
+                 ========================= -->
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
