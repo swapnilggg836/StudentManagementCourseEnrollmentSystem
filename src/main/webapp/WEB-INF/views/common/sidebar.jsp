@@ -1,4 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java"
+    contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <!-- ==============================
      ADMIN SIDEBAR
@@ -6,18 +8,26 @@
 
 <aside class="admin-sidebar" id="adminSidebar">
 
-    <!-- Logo -->
+
+    <!-- ==============================
+         LOGO
+    =============================== -->
+
     <div class="sidebar-logo">
 
         <a href="${pageContext.request.contextPath}/admin/dashboard"
            class="sidebar-brand">
 
             <span class="brand-icon">
+
                 <i class="bi bi-mortarboard-fill"></i>
+
             </span>
 
             <span class="brand-text">
+
                 Edu<span>Manage</span>
+
             </span>
 
         </a>
@@ -37,6 +47,7 @@
 
 
         <!-- Dashboard -->
+
         <a href="${pageContext.request.contextPath}/admin/dashboard"
            class="sidebar-link">
 
@@ -48,6 +59,7 @@
 
 
         <!-- Students -->
+
         <a href="${pageContext.request.contextPath}/admin/students"
            class="sidebar-link">
 
@@ -59,6 +71,7 @@
 
 
         <!-- Departments -->
+
         <a href="${pageContext.request.contextPath}/admin/departments"
            class="sidebar-link">
 
@@ -70,6 +83,7 @@
 
 
         <!-- Courses -->
+
         <a href="${pageContext.request.contextPath}/admin/courses"
            class="sidebar-link">
 
@@ -81,6 +95,7 @@
 
 
         <!-- Faculty -->
+
         <a href="${pageContext.request.contextPath}/admin/faculty"
            class="sidebar-link">
 
@@ -105,6 +120,7 @@
 
 
         <!-- Enrollments -->
+
         <a href="${pageContext.request.contextPath}/admin/enrollments"
            class="sidebar-link">
 
@@ -116,6 +132,7 @@
 
 
         <!-- Payments -->
+
         <a href="${pageContext.request.contextPath}/admin/payments"
            class="sidebar-link">
 
@@ -127,6 +144,7 @@
 
 
         <!-- Reports -->
+
         <a href="${pageContext.request.contextPath}/admin/reports"
            class="sidebar-link">
 
@@ -151,6 +169,7 @@
 
 
         <!-- Settings -->
+
         <a href="#"
            class="sidebar-link">
 
@@ -162,8 +181,10 @@
 
 
         <!-- Logout -->
+
         <a href="${pageContext.request.contextPath}/logout"
-           class="sidebar-link sidebar-logout">
+           class="sidebar-link sidebar-logout"
+           onclick="return confirm('Are you sure you want to logout?');">
 
             <i class="bi bi-box-arrow-right"></i>
 
@@ -205,5 +226,6 @@
         </button>
 
     </div>
+
 
 </aside>

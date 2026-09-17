@@ -1,69 +1,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
 <jsp:include page="../common/header.jsp" />
 
-
-<!-- =========================================================
-     ADMIN APPLICATION
-========================================================= -->
-
 <div class="admin-app">
-
-
-    <!-- =====================================================
-         SIDEBAR
-    ====================================================== -->
 
     <jsp:include page="../common/sidebar.jsp" />
 
-
-    <!-- =====================================================
-         MAIN AREA
-    ====================================================== -->
-
     <div class="admin-main">
-
-
-        <!-- =================================================
-             NAVBAR
-        ================================================== -->
 
         <jsp:include page="../common/navbar.jsp" />
 
-
-        <!-- =================================================
-             PAGE CONTENT
-        ================================================== -->
-
         <main class="admin-content">
 
-
-            <!-- =================================================
-                 PAGE HEADER
-            ================================================== -->
-
+            <!-- PAGE HEADER -->
             <div class="page-header">
 
                 <div class="page-header-left">
 
                     <div class="breadcrumb-area">
-
-                        <span>
-                            EduManage
-                        </span>
+                        <span>EduManage</span>
 
                         <i class="bi bi-chevron-right"></i>
 
-                        <span>
-                            Admin Dashboard
-                        </span>
-
+                        <span>Admin Dashboard</span>
                     </div>
-
 
                     <h1 class="page-title">
                         Registrar &amp; Executive Overview
@@ -71,26 +32,20 @@
 
                 </div>
 
-
-                <!-- ACTION BUTTONS -->
-
                 <div class="page-header-actions">
 
                     <a href="${pageContext.request.contextPath}/admin/students/add"
                        class="btn btn-primary">
 
                         <i class="bi bi-person-plus-fill me-2"></i>
-
                         Add Student
 
                     </a>
-
 
                     <a href="${pageContext.request.contextPath}/admin/courses/add"
                        class="btn btn-outline-primary">
 
                         <i class="bi bi-plus-circle me-2"></i>
-
                         Add Course
 
                     </a>
@@ -100,15 +55,10 @@
             </div>
 
 
-            <!-- =================================================
-                 STATISTICS CARDS
-            ================================================== -->
-
+            <!-- STATISTICS CARDS -->
             <div class="dashboard-stat-grid">
 
-
                 <!-- STUDENTS -->
-
                 <div class="dashboard-stat-card">
 
                     <div class="stat-card-top">
@@ -118,32 +68,24 @@
                         </span>
 
                         <div class="stat-icon stat-icon-blue">
-
                             <i class="bi bi-people-fill"></i>
-
                         </div>
 
                     </div>
 
-
-                    <div class="stat-number">
-                        10
+                    <div class="stat-value">
+                        ${stats.totalStudents}
                     </div>
 
-
                     <div class="stat-status stat-status-green">
-
                         <i class="bi bi-arrow-up"></i>
-
-                        +12% this sem
-
+                        Total Registered
                     </div>
 
                 </div>
 
 
                 <!-- COURSES -->
-
                 <div class="dashboard-stat-card">
 
                     <div class="stat-card-top">
@@ -153,18 +95,14 @@
                         </span>
 
                         <div class="stat-icon stat-icon-green">
-
                             <i class="bi bi-journal-bookmark-fill"></i>
-
                         </div>
 
                     </div>
 
-
-                    <div class="stat-number">
-                        8
+                    <div class="stat-value">
+                        ${stats.totalCourses}
                     </div>
-
 
                     <div class="stat-status stat-status-neutral">
                         Active Catalog
@@ -174,7 +112,6 @@
 
 
                 <!-- FACULTY -->
-
                 <div class="dashboard-stat-card">
 
                     <div class="stat-card-top">
@@ -184,28 +121,23 @@
                         </span>
 
                         <div class="stat-icon stat-icon-purple">
-
                             <i class="bi bi-person-badge-fill"></i>
-
                         </div>
 
                     </div>
 
-
-                    <div class="stat-number">
-                        5
+                    <div class="stat-value">
+                        ${stats.totalFaculty}
                     </div>
 
-
                     <div class="stat-status stat-status-neutral">
-                        5 Departments
+                        Teaching Staff
                     </div>
 
                 </div>
 
 
                 <!-- ENROLLMENTS -->
-
                 <div class="dashboard-stat-card">
 
                     <div class="stat-card-top">
@@ -215,18 +147,14 @@
                         </span>
 
                         <div class="stat-icon stat-icon-yellow">
-
                             <i class="bi bi-card-checklist"></i>
-
                         </div>
 
                     </div>
 
-
-                    <div class="stat-number">
-                        10
+                    <div class="stat-value">
+                        ${stats.totalEnrollments}
                     </div>
-
 
                     <div class="stat-status stat-status-yellow">
                         Confirmed Seats
@@ -235,8 +163,7 @@
                 </div>
 
 
-                <!-- PENDING -->
-
+                <!-- PENDING PAYMENTS -->
                 <div class="dashboard-stat-card">
 
                     <div class="stat-card-top">
@@ -246,18 +173,14 @@
                         </span>
 
                         <div class="stat-icon stat-icon-red">
-
                             <i class="bi bi-clock-history"></i>
-
                         </div>
 
                     </div>
 
-
-                    <div class="stat-number">
-                        1
+                    <div class="stat-value">
+                        ${stats.pendingPayments}
                     </div>
-
 
                     <div class="stat-status stat-status-red">
                         Awaiting Payment
@@ -267,7 +190,6 @@
 
 
                 <!-- REVENUE -->
-
                 <div class="dashboard-stat-card">
 
                     <div class="stat-card-top">
@@ -277,18 +199,14 @@
                         </span>
 
                         <div class="stat-icon stat-icon-cyan">
-
                             <i class="bi bi-currency-rupee"></i>
-
                         </div>
 
                     </div>
 
-
-                    <div class="stat-number stat-revenue">
-                        ₹98,500
+                    <div class="stat-value">
+                        ₹${stats.totalRevenue}
                     </div>
-
 
                     <div class="stat-status stat-status-green">
                         Tuition Settled
@@ -299,19 +217,11 @@
             </div>
 
 
-            <!-- =================================================
-                 CHART SECTION
-            ================================================== -->
-
+            <!-- CHART SECTION -->
             <div class="dashboard-chart-grid">
 
-
-                <!-- =============================================
-                     STUDENT ENROLLMENT TREND
-                ============================================== -->
-
+                <!-- STUDENT ENROLLMENT TREND -->
                 <div class="dashboard-panel enrollment-chart-panel">
-
 
                     <div class="panel-header">
 
@@ -322,11 +232,10 @@
                             </h2>
 
                             <p class="panel-subtitle">
-                                Monthly registrations across semesters
+                                Monthly enrollments across semesters
                             </p>
 
                         </div>
-
 
                         <span class="academic-badge">
                             Academic Year 2026
@@ -334,24 +243,15 @@
 
                     </div>
 
-
-                    <!-- Chart -->
-
                     <div class="chart-container">
-
                         <canvas id="enrollmentTrendChart"></canvas>
-
                     </div>
 
                 </div>
 
 
-                <!-- =============================================
-                     DEPARTMENT SHARE
-                ============================================== -->
-
+                <!-- DEPARTMENT SHARE -->
                 <div class="dashboard-panel department-chart-panel">
-
 
                     <div class="panel-header">
 
@@ -369,63 +269,34 @@
 
                     </div>
 
-
-                    <!-- Chart -->
-
                     <div class="department-chart-container">
-
                         <canvas id="departmentShareChart"></canvas>
-
                     </div>
 
 
-                    <!-- Legend -->
-
+                    <!-- DYNAMIC DEPARTMENT LEGEND -->
                     <div class="department-legend">
 
-                        <div class="legend-item">
+                        <c:forEach var="department"
+                                   items="${departmentShare}"
+                                   varStatus="status">
 
-                            <span class="legend-color legend-blue"></span>
+                            <div class="legend-item">
 
-                            <span>CS</span>
+                                <span class="${status.index == 0 ? 'legend-blue' :
+                                              status.index == 1 ? 'legend-green' :
+                                              status.index == 2 ? 'legend-orange' :
+                                              status.index == 3 ? 'legend-red' :
+                                              'legend-purple'}">
+                                </span>
 
-                        </div>
+                                <span>
+                                    ${department.departmentCode}
+                                </span>
 
+                            </div>
 
-                        <div class="legend-item">
-
-                            <span class="legend-color legend-green"></span>
-
-                            <span>IT</span>
-
-                        </div>
-
-
-                        <div class="legend-item">
-
-                            <span class="legend-color legend-orange"></span>
-
-                            <span>ME</span>
-
-                        </div>
-
-
-                        <div class="legend-item">
-
-                            <span class="legend-color legend-red"></span>
-
-                            <span>CE</span>
-
-                        </div>
-
-
-                        <div class="legend-item">
-
-                            <span class="legend-color legend-purple"></span>
-
-                            <span>ET</span>
-
-                        </div>
+                        </c:forEach>
 
                     </div>
 
@@ -434,12 +305,8 @@
             </div>
 
 
-            <!-- =================================================
-                 LOWER DASHBOARD AREA
-            ================================================== -->
-
+            <!-- DEPARTMENT OPERATIONAL SUMMARY -->
             <div class="dashboard-panel dashboard-summary-panel">
-
 
                 <div class="panel-header">
 
@@ -455,12 +322,10 @@
 
                     </div>
 
-
                     <a href="${pageContext.request.contextPath}/admin/reports"
                        class="panel-link">
 
                         View Reports
-
                         <i class="bi bi-arrow-right"></i>
 
                     </a>
@@ -507,109 +372,99 @@
 
                         <tbody>
 
-                            <tr>
+                            <c:choose>
 
-                                <td>
-                                    <strong>
-                                        Computer Science &amp; Engineering
-                                    </strong>
-                                </td>
+                                <c:when test="${not empty departmentSummary}">
 
-                                <td>
-                                    120
-                                </td>
+                                    <c:forEach var="department"
+                                               items="${departmentSummary}">
 
-                                <td>
-                                    8
-                                </td>
+                                        <tr>
 
-                                <td>
-                                    5
-                                </td>
+                                            <td>
 
-                                <td>
-                                    85%
-                                </td>
+                                                <strong>
+                                                    ${department.departmentName}
+                                                </strong>
 
-                                <td>
+                                                <small style="display:block;
+                                                              color:#94a3b8;
+                                                              margin-top:3px;">
+                                                    ${department.departmentCode}
+                                                </small>
 
-                                    <span class="status-badge status-active">
-                                        Active
-                                    </span>
-
-                                </td>
-
-                            </tr>
+                                            </td>
 
 
-                            <tr>
-
-                                <td>
-                                    <strong>
-                                        Information Technology
-                                    </strong>
-                                </td>
-
-                                <td>
-                                    95
-                                </td>
-
-                                <td>
-                                    6
-                                </td>
-
-                                <td>
-                                    4
-                                </td>
-
-                                <td>
-                                    78%
-                                </td>
-
-                                <td>
-
-                                    <span class="status-badge status-active">
-                                        Active
-                                    </span>
-
-                                </td>
-
-                            </tr>
+                                            <td>
+                                                ${department.studentCount}
+                                            </td>
 
 
-                            <tr>
+                                            <td>
+                                                ${department.courseCount}
+                                            </td>
 
-                                <td>
-                                    <strong>
-                                        Mechanical Engineering
-                                    </strong>
-                                </td>
 
-                                <td>
-                                    82
-                                </td>
+                                            <td>
+                                                ${department.facultyCount}
+                                            </td>
 
-                                <td>
-                                    7
-                                </td>
 
-                                <td>
-                                    4
-                                </td>
+                                            <td>
+                                                ${department.enrollmentPercentage}%
+                                            </td>
 
-                                <td>
-                                    71%
-                                </td>
 
-                                <td>
+                                            <td>
 
-                                    <span class="status-badge status-active">
-                                        Active
-                                    </span>
+                                                <c:choose>
 
-                                </td>
+                                                    <c:when test="${department.status == 'Active'}">
 
-                            </tr>
+                                                        <span class="status-badge status-active">
+                                                            Active
+                                                        </span>
+
+                                                    </c:when>
+
+                                                    <c:otherwise>
+
+                                                        <span class="status-badge">
+                                                            Inactive
+                                                        </span>
+
+                                                    </c:otherwise>
+
+                                                </c:choose>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </c:forEach>
+
+                                </c:when>
+
+
+                                <c:otherwise>
+
+                                    <tr>
+
+                                        <td colspan="6"
+                                            style="text-align:center;
+                                                   padding:30px;
+                                                   color:#94a3b8;">
+
+                                            No department data available.
+
+                                        </td>
+
+                                    </tr>
+
+                                </c:otherwise>
+
+                            </c:choose>
 
                         </tbody>
 
@@ -619,16 +474,100 @@
 
             </div>
 
-
         </main>
 
-
-        <!-- =================================================
-             FOOTER
-        ================================================== -->
 
         <jsp:include page="../common/footer.jsp" />
 
     </div>
 
 </div>
+
+
+<!-- BACKEND DATA FOR JAVASCRIPT -->
+
+<script>
+
+    /*
+     * ========================================================
+     * ADMIN DASHBOARD BACKEND DATA
+     * ========================================================
+     *
+     * MySQL
+     *    ↓
+     * DashboardRepository
+     *    ↓
+     * DashboardService
+     *    ↓
+     * AdminController
+     *    ↓
+     * dashboard.jsp
+     *    ↓
+     * script.js
+     */
+
+
+    /* ========================================================
+       STUDENT ENROLLMENT TREND DATA
+       ======================================================== */
+
+    window.enrollmentTrendData = [
+
+        <c:forEach var="trend"
+                   items="${enrollmentTrend}"
+                   varStatus="status">
+
+            {
+                month: "${trend.month}",
+                totalEnrollments: ${trend.totalEnrollments}
+            }
+
+            <c:if test="${!status.last}">
+                ,
+            </c:if>
+
+        </c:forEach>
+
+    ];
+
+
+    /* ========================================================
+       DEPARTMENT SHARE DATA
+       ======================================================== */
+
+    window.departmentShareData = [
+
+        <c:forEach var="department"
+                   items="${departmentShare}"
+                   varStatus="status">
+
+            {
+                code: "${department.departmentCode}",
+                name: "${department.departmentName}",
+                studentCount: ${department.studentCount}
+            }
+
+            <c:if test="${!status.last}">
+                ,
+            </c:if>
+
+        </c:forEach>
+
+    ];
+
+
+    /* ========================================================
+       DEBUG DATA
+       ======================================================== */
+
+    console.log(
+        "Enrollment Trend Data:",
+        window.enrollmentTrendData
+    );
+
+    console.log(
+        "Department Share Data:",
+        window.departmentShareData
+    );
+
+</script>

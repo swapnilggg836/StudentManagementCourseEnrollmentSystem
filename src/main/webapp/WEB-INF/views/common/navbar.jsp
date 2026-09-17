@@ -1,4 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java"
+    contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <!-- ==============================
      ADMIN TOP NAVBAR
@@ -6,10 +8,16 @@
 
 <header class="admin-navbar">
 
-    <!-- Left Side -->
+
+    <!-- ==============================
+         LEFT SIDE
+    =============================== -->
+
     <div class="navbar-left">
 
+
         <!-- Mobile Sidebar Button -->
+
         <button type="button"
                 class="sidebar-toggle"
                 id="sidebarToggle"
@@ -20,7 +28,8 @@
         </button>
 
 
-        <!-- Page Title -->
+        <!-- Page Information -->
+
         <div class="navbar-page-info">
 
             <h5 class="navbar-page-title">
@@ -36,11 +45,17 @@
     </div>
 
 
-    <!-- Right Side -->
+    <!-- ==============================
+         RIGHT SIDE
+    =============================== -->
+
     <div class="navbar-right">
 
 
-        <!-- Search -->
+        <!-- ==============================
+             SEARCH
+        =============================== -->
+
         <div class="navbar-search">
 
             <i class="bi bi-search"></i>
@@ -54,7 +69,10 @@
         </div>
 
 
-        <!-- Notification -->
+        <!-- ==============================
+             NOTIFICATION
+        =============================== -->
+
         <button type="button"
                 class="navbar-icon-btn"
                 title="Notifications"
@@ -70,12 +88,19 @@
 
 
         <!-- Divider -->
+
         <div class="navbar-divider"></div>
 
 
-        <!-- Admin Profile -->
+        <!-- ==============================
+             ADMIN PROFILE
+        =============================== -->
+
         <div class="navbar-profile"
              id="adminProfile">
+
+
+            <!-- Avatar -->
 
             <div class="navbar-avatar">
 
@@ -83,6 +108,8 @@
 
             </div>
 
+
+            <!-- Profile Information -->
 
             <div class="navbar-profile-info">
 
@@ -97,6 +124,8 @@
             </div>
 
 
+            <!-- Dropdown Button -->
+
             <button type="button"
                     class="profile-dropdown-btn"
                     id="profileDropdownBtn"
@@ -107,9 +136,15 @@
             </button>
 
 
-            <!-- Profile Dropdown -->
+            <!-- ==============================
+                 PROFILE DROPDOWN
+            =============================== -->
+
             <div class="profile-dropdown"
                  id="profileDropdown">
+
+
+                <!-- My Profile -->
 
                 <a href="#"
                    class="profile-dropdown-item">
@@ -123,6 +158,8 @@
                 </a>
 
 
+                <!-- Settings -->
+
                 <a href="#"
                    class="profile-dropdown-item">
 
@@ -135,11 +172,16 @@
                 </a>
 
 
+                <!-- Divider -->
+
                 <div class="profile-dropdown-divider"></div>
 
 
+                <!-- Logout -->
+
                 <a href="${pageContext.request.contextPath}/logout"
-                   class="profile-dropdown-item logout-item">
+                   class="profile-dropdown-item logout-item"
+                   onclick="return confirm('Are you sure you want to logout?');">
 
                     <i class="bi bi-box-arrow-right"></i>
 

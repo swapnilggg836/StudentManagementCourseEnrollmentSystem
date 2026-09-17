@@ -1,15 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!-- ==============================
      ADMIN FOOTER
 ================================ -->
 
 <footer class="admin-footer">
 
+
     <div class="footer-left">
 
         <span>
-            Â© 2026 EduManage
+            © 2026 EduManage
         </span>
 
         <span class="footer-separator">
@@ -26,12 +25,17 @@
     <div class="footer-right">
 
         <span>
+
             Made with
+
             <i class="bi bi-heart-fill"></i>
+
             for Education
+
         </span>
 
     </div>
+
 
 </footer>
 
@@ -52,6 +56,9 @@
 <script
     src="${pageContext.request.contextPath}/resources/js/script.js">
 </script>
+
+
+<!-- CLOSE HTML -->
 
 </body>
 
