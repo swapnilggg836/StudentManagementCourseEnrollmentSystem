@@ -45,6 +45,17 @@ public class StudentService {
 
 
     // =========================================================
+    // GET STUDENT BY USER ID
+    // Used by Student Dashboard / Student Profile
+    // =========================================================
+
+    public Student getStudentByUserId(int userId) {
+
+        return studentRepository.findByUserId(userId);
+    }
+
+
+    // =========================================================
     // SEARCH STUDENTS
     // =========================================================
 

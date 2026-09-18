@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class LoginController {
 
@@ -38,22 +40,41 @@ public class LoginController {
 
     @PostMapping("/login")
     public String login(
-            @RequestParam("username") String username,
-            @RequestParam("password") String password,
+
+            @RequestParam("username")
+            String username,
+
+            @RequestParam("password")
+            String password,
+
+            HttpSession session,
+
             Model model) {
 
 
-        // Print entered email for testing
-        System.out.println("Login email: " + username);
+        // -------------------------------------------------
+        // DEBUG
+        // -------------------------------------------------
+
+        System.out.println(
+                "Login email: " + username
+        );
 
 
-        // Send email and password to UserService
-        User user = userService.authenticate(username, password);
+        // -------------------------------------------------
+        // AUTHENTICATE USER
+        // -------------------------------------------------
+
+        User user =
+                userService.authenticate(
+                        username,
+                        password
+                );
 
 
-        // =================================================
+        // -------------------------------------------------
         // LOGIN FAILED
-        // =================================================
+        // -------------------------------------------------
 
         if (user == null) {
 
@@ -66,20 +87,54 @@ public class LoginController {
         }
 
 
-        // =================================================
+        // -------------------------------------------------
         // LOGIN SUCCESSFUL
-        // =================================================
+        // -------------------------------------------------
 
-        System.out.println("Login successful");
-        System.out.println("User ID: " + user.getUserId());
-        System.out.println("Email: " + user.getEmail());
-        System.out.println("Role: " + user.getRole());
-        System.out.println("Status: " + user.getStatus());
+        System.out.println(
+                "Login successful"
+        );
+
+        System.out.println(
+                "User ID: " + user.getUserId()
+        );
+
+        System.out.println(
+                "Email: " + user.getEmail()
+        );
+
+        System.out.println(
+                "Role: " + user.getRole()
+        );
+
+        System.out.println(
+                "Status: " + user.getStatus()
+        );
 
 
-        // =================================================
+        // -------------------------------------------------
+        // STORE USER INFORMATION IN SESSION
+        // -------------------------------------------------
+
+        session.setAttribute(
+                "userId",
+                user.getUserId()
+        );
+
+        session.setAttribute(
+                "userEmail",
+                user.getEmail()
+        );
+
+        session.setAttribute(
+                "userRole",
+                user.getRole()
+        );
+
+
+        // -------------------------------------------------
         // ADMIN
-        // =================================================
+        // -------------------------------------------------
 
         if ("ADMIN".equals(user.getRole())) {
 
@@ -87,9 +142,9 @@ public class LoginController {
         }
 
 
-        // =================================================
+        // -------------------------------------------------
         // STUDENT
-        // =================================================
+        // -------------------------------------------------
 
         if ("STUDENT".equals(user.getRole())) {
 
@@ -97,9 +152,9 @@ public class LoginController {
         }
 
 
-        // =================================================
+        // -------------------------------------------------
         // FACULTY
-        // =================================================
+        // -------------------------------------------------
 
         if ("FACULTY".equals(user.getRole())) {
 
@@ -107,9 +162,11 @@ public class LoginController {
         }
 
 
-        // =================================================
+        // -------------------------------------------------
         // INVALID ROLE
-        // =================================================
+        // -------------------------------------------------
+
+        session.invalidate();
 
         model.addAttribute(
                 "error",

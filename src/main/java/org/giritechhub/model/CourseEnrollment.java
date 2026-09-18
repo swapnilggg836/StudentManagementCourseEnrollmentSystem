@@ -7,15 +7,23 @@ public class CourseEnrollment {
     private int enrollmentId;
 
     private int studentId;
+
     private String studentName;
+
     private String rollNo;
 
     private int courseId;
+
     private String courseCode;
+
     private String courseTitle;
 
+    private int credits;
+
     private int deptId;
+
     private String departmentCode;
+
     private String departmentName;
 
     private int semester;
@@ -27,9 +35,9 @@ public class CourseEnrollment {
     private String grade;
 
 
-    // =========================
+    // =========================================================
     // GETTERS AND SETTERS
-    // =========================
+    // =========================================================
 
     public int getEnrollmentId() {
         return enrollmentId;
@@ -94,6 +102,19 @@ public class CourseEnrollment {
     }
 
 
+    // =========================================================
+    // CREDITS
+    // =========================================================
+
+    public int getCredits() {
+        return credits;
+    }
+
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+
+
     public int getDeptId() {
         return deptId;
     }
@@ -155,4 +176,5 @@ public class CourseEnrollment {
     public void setGrade(String grade) {
         this.grade = grade;
     }
+
 }

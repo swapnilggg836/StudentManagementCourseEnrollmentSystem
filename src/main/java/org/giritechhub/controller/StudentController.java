@@ -5,8 +5,12 @@ import java.util.List;
 
 import org.giritechhub.model.Department;
 import org.giritechhub.model.Student;
+import org.giritechhub.model.StudentSchedule;
 import org.giritechhub.service.DepartmentService;
+import org.giritechhub.service.StudentScheduleService;
 import org.giritechhub.service.StudentService;
+
+import jakarta.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,9 +28,12 @@ public class StudentController {
     @Autowired
     private DepartmentService departmentService;
 
+    @Autowired
+    private StudentScheduleService studentScheduleService;
+
 
     // =========================================================
-    // STUDENT LIST
+    // ADMIN - STUDENT LIST
     // =========================================================
 
     @GetMapping("/admin/students")
@@ -69,7 +76,7 @@ public class StudentController {
 
 
     // =========================================================
-    // VIEW STUDENT
+    // ADMIN - VIEW STUDENT
     // =========================================================
 
     @GetMapping("/admin/students/view")
@@ -96,7 +103,7 @@ public class StudentController {
 
 
     // =========================================================
-    // ADD STUDENT PAGE
+    // ADMIN - ADD STUDENT PAGE
     // =========================================================
 
     @GetMapping("/admin/students/add")
@@ -124,7 +131,7 @@ public class StudentController {
 
 
     // =========================================================
-    // SAVE STUDENT
+    // ADMIN - SAVE STUDENT
     // =========================================================
 
     @PostMapping("/admin/students/save")
@@ -206,7 +213,7 @@ public class StudentController {
 
 
     // =========================================================
-    // EDIT STUDENT PAGE
+    // ADMIN - EDIT STUDENT PAGE
     // =========================================================
 
     @GetMapping("/admin/students/edit")
@@ -241,7 +248,7 @@ public class StudentController {
 
 
     // =========================================================
-    // UPDATE STUDENT
+    // ADMIN - UPDATE STUDENT
     // =========================================================
 
     @PostMapping("/admin/students/update")
@@ -319,7 +326,7 @@ public class StudentController {
 
 
     // =========================================================
-    // DELETE STUDENT
+    // ADMIN - DELETE STUDENT
     // =========================================================
 
     @PostMapping("/admin/students/delete")
@@ -333,4 +340,98 @@ public class StudentController {
         return "redirect:/admin/students";
     }
 
+
+    // =========================================================
+    // STUDENT - SCHEDULE
+    // =========================================================
+    //
+    // URL:
+    // /student/schedule
+    //
+    // FLOW:
+    //
+    // Login
+    //   ↓
+    // Session userId
+    //   ↓
+    // Find Student
+    //   ↓
+    // Get ENROLLED courses
+    //   ↓
+    // Get schedule
+    //   ↓
+    // schedule.jsp
+    //
+    // =========================================================
+
+    @GetMapping("/student/schedule")
+    public String studentSchedule(
+            HttpSession session,
+            Model model) {
+
+
+        // =====================================================
+        // CHECK LOGIN
+        // =====================================================
+
+        Object userIdObject =
+                session.getAttribute("userId");
+
+        if (userIdObject == null) {
+
+            return "redirect:/login";
+        }
+
+
+        int userId =
+                (Integer) userIdObject;
+
+
+        // =====================================================
+        // GET STUDENT
+        // =====================================================
+
+        Student student =
+                studentService.getStudentByUserId(
+                        userId
+                );
+
+
+        if (student == null) {
+
+            return "redirect:/student/dashboard";
+        }
+
+
+        // =====================================================
+        // GET STUDENT SCHEDULE
+        // =====================================================
+
+        List<StudentSchedule> schedule =
+                studentScheduleService.getStudentSchedule(
+                        student.getStudentId()
+                );
+
+
+        // =====================================================
+        // SEND DATA TO JSP
+        // =====================================================
+
+        model.addAttribute(
+                "student",
+                student
+        );
+
+        model.addAttribute(
+                "schedule",
+                schedule
+        );
+
+
+        // =====================================================
+        // OPEN JSP
+        // =====================================================
+
+        return "student/schedule";
+    }
 }

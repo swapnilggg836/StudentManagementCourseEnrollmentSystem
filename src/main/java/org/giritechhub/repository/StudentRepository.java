@@ -32,15 +32,20 @@ public class StudentRepository {
                 "s.first_name, " +
                 "s.last_name, " +
                 "s.dept_id, " +
+                "d.dept_code, " +
                 "d.dept_name, " +
                 "s.semester, " +
                 "s.phone, " +
                 "s.gender, " +
                 "s.dob, " +
-                "s.address " +
+                "s.address, " +
+                "u.email, " +
+                "u.status " +
                 "FROM students s " +
                 "LEFT JOIN departments d " +
                 "ON s.dept_id = d.dept_id " +
+                "LEFT JOIN users u " +
+                "ON s.user_id = u.user_id " +
                 "ORDER BY s.student_id DESC";
 
         return jdbcTemplate.query(
@@ -64,15 +69,20 @@ public class StudentRepository {
                 "s.first_name, " +
                 "s.last_name, " +
                 "s.dept_id, " +
+                "d.dept_code, " +
                 "d.dept_name, " +
                 "s.semester, " +
                 "s.phone, " +
                 "s.gender, " +
                 "s.dob, " +
-                "s.address " +
+                "s.address, " +
+                "u.email, " +
+                "u.status " +
                 "FROM students s " +
                 "LEFT JOIN departments d " +
                 "ON s.dept_id = d.dept_id " +
+                "LEFT JOIN users u " +
+                "ON s.user_id = u.user_id " +
                 "WHERE s.student_id = ?";
 
         List<Student> students =
@@ -80,6 +90,52 @@ public class StudentRepository {
                         sql,
                         new StudentRowMapper(),
                         studentId
+                );
+
+        if (students.isEmpty()) {
+            return null;
+        }
+
+        return students.get(0);
+    }
+
+
+    // =========================================================
+    // GET STUDENT BY USER ID
+    // Used for logged-in Student Dashboard/Profile
+    // =========================================================
+
+    public Student findByUserId(int userId) {
+
+        String sql =
+                "SELECT " +
+                "s.student_id, " +
+                "s.user_id, " +
+                "s.roll_no, " +
+                "s.first_name, " +
+                "s.last_name, " +
+                "s.dept_id, " +
+                "d.dept_code, " +
+                "d.dept_name, " +
+                "s.semester, " +
+                "s.phone, " +
+                "s.gender, " +
+                "s.dob, " +
+                "s.address, " +
+                "u.email, " +
+                "u.status " +
+                "FROM students s " +
+                "LEFT JOIN departments d " +
+                "ON s.dept_id = d.dept_id " +
+                "LEFT JOIN users u " +
+                "ON s.user_id = u.user_id " +
+                "WHERE s.user_id = ?";
+
+        List<Student> students =
+                jdbcTemplate.query(
+                        sql,
+                        new StudentRowMapper(),
+                        userId
                 );
 
         if (students.isEmpty()) {
@@ -104,20 +160,26 @@ public class StudentRepository {
                 "s.first_name, " +
                 "s.last_name, " +
                 "s.dept_id, " +
+                "d.dept_code, " +
                 "d.dept_name, " +
                 "s.semester, " +
                 "s.phone, " +
                 "s.gender, " +
                 "s.dob, " +
-                "s.address " +
+                "s.address, " +
+                "u.email, " +
+                "u.status " +
                 "FROM students s " +
                 "LEFT JOIN departments d " +
                 "ON s.dept_id = d.dept_id " +
+                "LEFT JOIN users u " +
+                "ON s.user_id = u.user_id " +
                 "WHERE " +
                 "s.roll_no LIKE ? " +
                 "OR s.first_name LIKE ? " +
                 "OR s.last_name LIKE ? " +
                 "OR d.dept_name LIKE ? " +
+                "OR u.email LIKE ? " +
                 "ORDER BY s.student_id DESC";
 
         String searchValue =
@@ -126,6 +188,7 @@ public class StudentRepository {
         return jdbcTemplate.query(
                 sql,
                 new StudentRowMapper(),
+                searchValue,
                 searchValue,
                 searchValue,
                 searchValue,
@@ -230,6 +293,11 @@ public class StudentRepository {
             Student student =
                     new Student();
 
+
+            // -------------------------------------------------
+            // STUDENT INFORMATION
+            // -------------------------------------------------
+
             student.setStudentId(
                     rs.getInt("student_id")
             );
@@ -250,17 +318,36 @@ public class StudentRepository {
                     rs.getString("last_name")
             );
 
+
+            // -------------------------------------------------
+            // DEPARTMENT
+            // -------------------------------------------------
+
             student.setDeptId(
                     rs.getInt("dept_id")
+            );
+
+            student.setDepartmentCode(
+                    rs.getString("dept_code")
             );
 
             student.setDepartmentName(
                     rs.getString("dept_name")
             );
 
+
+            // -------------------------------------------------
+            // ACADEMIC INFORMATION
+            // -------------------------------------------------
+
             student.setSemester(
                     rs.getInt("semester")
             );
+
+
+            // -------------------------------------------------
+            // CONTACT INFORMATION
+            // -------------------------------------------------
 
             student.setPhone(
                     rs.getString("phone")
@@ -270,6 +357,11 @@ public class StudentRepository {
                     rs.getString("gender")
             );
 
+
+            // -------------------------------------------------
+            // DATE OF BIRTH
+            // -------------------------------------------------
+
             if (rs.getDate("dob") != null) {
 
                 student.setDob(
@@ -278,9 +370,28 @@ public class StudentRepository {
                 );
             }
 
+
+            // -------------------------------------------------
+            // ADDRESS
+            // -------------------------------------------------
+
             student.setAddress(
                     rs.getString("address")
             );
+
+
+            // -------------------------------------------------
+            // USER INFORMATION
+            // -------------------------------------------------
+
+            student.setEmail(
+                    rs.getString("email")
+            );
+
+            student.setStatus(
+                    rs.getString("status")
+            );
+
 
             return student;
         }
