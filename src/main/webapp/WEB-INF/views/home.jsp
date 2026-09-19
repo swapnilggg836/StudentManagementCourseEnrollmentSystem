@@ -10,11 +10,9 @@
     <meta charset="UTF-8">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
 
-    <title>
-        EduManage - Student Management & Course Enrollment System
-    </title>
+    <title>EduManage - Student Management & Course Enrollment System</title>
 
     <!-- Bootstrap 5 -->
     <link
@@ -31,13 +29,15 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- YOUR CUSTOM CSS -->
-    <link rel="stylesheet"
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
         href="${pageContext.request.contextPath}/resources/css/style.css">
 
 </head>
 
 <body>
+
 
 <!-- ========================================================= -->
 <!-- NAVBAR -->
@@ -47,7 +47,7 @@
 
     <div class="container">
 
-        <!-- Logo -->
+        <!-- BRAND -->
 
         <a class="navbar-brand d-flex align-items-center gap-2"
            href="${pageContext.request.contextPath}/">
@@ -63,59 +63,60 @@
         </a>
 
 
-        <!-- Mobile Toggle -->
+        <!-- MOBILE BUTTON -->
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
             <span class="navbar-toggler-icon"></span>
 
         </button>
 
 
-        <!-- Navigation -->
+        <!-- NAVIGATION -->
 
-        <div class="collapse navbar-collapse" id="mainNavbar">
+        <div class="collapse navbar-collapse"
+             id="mainNavbar">
 
             <ul class="navbar-nav mx-auto gap-lg-3">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#home">
+                    <a class="nav-link active"
+                       href="#home">
                         Home
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">
+                    <a class="nav-link"
+                       href="#about">
                         About
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#courses">
-                        Courses
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#features">
+                    <a class="nav-link"
+                       href="#features">
                         Features
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#workflow">
+                    <a class="nav-link"
+                       href="#workflow">
                         How It Works
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">
+                    <a class="nav-link"
+                       href="#contact">
                         Contact
                     </a>
                 </li>
@@ -123,23 +124,17 @@
             </ul>
 
 
-            <!-- Right Buttons -->
+            <!-- ONLY ONE MAIN BUTTON -->
 
-            <div class="d-flex gap-2">
+            <div class="d-flex">
 
-                <a href="${pageContext.request.contextPath}/login"
-                   class="btn btn-outline-primary px-4">
+                <a
+                    href="${pageContext.request.contextPath}/login"
+                    class="btn btn-primary px-4">
 
                     <i class="bi bi-box-arrow-in-right me-2"></i>
+
                     Sign In
-
-                </a>
-
-                <a href="${pageContext.request.contextPath}/login"
-                   class="btn btn-primary px-4">
-
-                    <i class="bi bi-person-fill me-2"></i>
-                    Student Portal
 
                 </a>
 
@@ -152,17 +147,20 @@
 </nav>
 
 
+
 <!-- ========================================================= -->
 <!-- HERO -->
 <!-- ========================================================= -->
 
-<section id="home" class="hero-section">
+<section id="home"
+         class="hero-section">
 
     <div class="container">
 
         <div class="row align-items-center g-5">
 
-            <!-- LEFT -->
+
+            <!-- HERO LEFT -->
 
             <div class="col-lg-7">
 
@@ -170,7 +168,7 @@
 
                     <i class="bi bi-stars me-2"></i>
 
-                    Next-Gen Higher Education Management
+                    Academic Management System
 
                 </span>
 
@@ -188,67 +186,59 @@
 
                 <p class="hero-description mt-4">
 
-                    A centralized SaaS platform to seamlessly manage
-                    student lifecycles, curriculum courses, faculty
-                    assignments, real-time seat capacities, and
-                    simulated academic tuition payments.
+                    EduManage is a centralized web application for
+                    managing students, faculty, departments, courses,
+                    enrollments, payments and attendance through
+                    role-based portals.
 
                 </p>
 
 
-                <!-- HERO BUTTONS -->
+                <!-- MAIN ACTION -->
 
                 <div class="d-flex flex-wrap gap-3 mt-4">
 
-                    <a href="${pageContext.request.contextPath}/login"
-                       class="btn btn-primary btn-lg hero-btn">
+                    <a
+                        href="${pageContext.request.contextPath}/login"
+                        class="btn btn-primary btn-lg hero-btn">
 
-                        <i class="bi bi-person-badge me-2"></i>
+                        <i class="bi bi-box-arrow-in-right me-2"></i>
 
-                        Sign In
-
-                    </a>
-
-
-                    <a href="${pageContext.request.contextPath}/login"
-                       class="btn btn-outline-dark btn-lg hero-btn">
-
-                        <i class="bi bi-shield-lock me-2"></i>
-
-                        Admin / Registrar
-
-                    </a>
-
-
-                    <a href="${pageContext.request.contextPath}/login"
-                       class="btn btn-outline-secondary btn-lg hero-btn">
-
-                        <i class="bi bi-person-workspace me-2"></i>
-
-                        Faculty
+                        Sign In to EduManage
 
                     </a>
 
                 </div>
 
 
-                <!-- TRUST ITEMS -->
+                <!-- KEY POINTS -->
 
                 <div class="hero-points mt-4">
 
                     <span>
+
                         <i class="bi bi-check-circle-fill"></i>
-                        Secure Role-Based Access
+
+                        Role-Based Access
+
                     </span>
 
-                    <span>
-                        <i class="bi bi-check-circle-fill"></i>
-                        MySQL Powered
-                    </span>
 
                     <span>
+
                         <i class="bi bi-check-circle-fill"></i>
-                        Responsive SaaS UI
+
+                        Course Enrollment
+
+                    </span>
+
+
+                    <span>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        Attendance Management
+
                     </span>
 
                 </div>
@@ -256,28 +246,32 @@
             </div>
 
 
-            <!-- RIGHT DEMO -->
+
+            <!-- HERO RIGHT -->
 
             <div class="col-lg-5">
 
                 <div class="demo-card">
+
 
                     <div class="demo-header">
 
                         <div class="window-dots">
 
                             <span class="dot red"></span>
+
                             <span class="dot yellow"></span>
+
                             <span class="dot green"></span>
 
                         </div>
 
                         <strong>
-                            EduManage — Quick Demo Preview
+                            EduManage Portal
                         </strong>
 
                         <span class="online-badge">
-                            Online
+                            System
                         </span>
 
                     </div>
@@ -285,113 +279,108 @@
 
                     <div class="demo-body">
 
-                        <div class="d-flex justify-content-between align-items-center mb-3">
 
-                            <div>
+                        <div class="mb-4">
 
-                                <small class="text-uppercase text-muted fw-bold">
-                                    Active Semester
-                                </small>
+                            <small class="text-uppercase text-muted fw-bold">
+                                Academic Management
+                            </small>
 
-                                <h5 class="fw-bold mb-0 mt-1">
-                                    Autumn 2026 Registration
-                                </h5>
-
-                            </div>
-
-                            <span class="status-open">
-                                Open
-                            </span>
+                            <h5 class="fw-bold mb-0 mt-1">
+                                Manage Everything in One Place
+                            </h5>
 
                         </div>
 
 
-                        <!-- COURSE 1 -->
+                        <!-- FEATURE PREVIEW -->
 
                         <div class="demo-course">
 
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
 
-                                <strong>
-                                    CS101 — Data Structures
-                                </strong>
+                                <div class="feature-icon blue">
 
-                                <span class="seat-badge">
-                                    48/60 Seats
-                                </span>
+                                    <i class="bi bi-people-fill"></i>
 
-                            </div>
+                                </div>
 
+                                <div>
 
-                            <div class="progress mt-2">
+                                    <strong>
+                                        Student Management
+                                    </strong>
 
-                                <div class="progress-bar"
-                                     style="width:80%">
+                                    <small class="d-block text-muted">
+                                        Profiles and academic information
+                                    </small>
+
                                 </div>
 
                             </div>
 
-
-                            <div class="d-flex justify-content-between mt-2">
-
-                                <small class="text-muted">
-                                    Faculty: Dr. Rajesh Joshi
-                                </small>
-
-                                <strong class="course-fee">
-                                    ₹15,000
-                                </strong>
-
-                            </div>
-
                         </div>
 
 
-                        <!-- COURSE 2 -->
-
                         <div class="demo-course">
 
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
 
-                                <strong>
-                                    IT201 — Modern Web Apps
-                                </strong>
+                                <div class="feature-icon green">
 
-                                <span class="seat-badge warning">
-                                    49/50 Seats
-                                </span>
+                                    <i class="bi bi-journal-check"></i>
 
-                            </div>
+                                </div>
 
+                                <div>
 
-                            <div class="progress mt-2">
+                                    <strong>
+                                        Course Enrollment
+                                    </strong>
 
-                                <div class="progress-bar warning-bar"
-                                     style="width:98%">
+                                    <small class="d-block text-muted">
+                                        Browse, cart and enroll in courses
+                                    </small>
+
                                 </div>
 
                             </div>
 
+                        </div>
 
-                            <div class="d-flex justify-content-between mt-2">
 
-                                <small class="text-muted">
-                                    Faculty: Prof. Sunita Deshmukh
-                                </small>
+                        <div class="demo-course">
 
-                                <strong class="course-fee">
-                                    ₹12,500
-                                </strong>
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="feature-icon purple">
+
+                                    <i class="bi bi-person-workspace"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Faculty Management
+                                    </strong>
+
+                                    <small class="d-block text-muted">
+                                        Courses, students and attendance
+                                    </small>
+
+                                </div>
 
                             </div>
 
                         </div>
 
 
-                        <a href="${pageContext.request.contextPath}/login"
-                           class="btn btn-primary w-100 mt-2">
+                        <a
+                            href="${pageContext.request.contextPath}/login"
+                            class="btn btn-primary w-100 mt-2">
 
-                            Launch Portal Now
+                            Open EduManage
 
                             <i class="bi bi-arrow-right ms-2"></i>
 
@@ -410,26 +399,87 @@
 </section>
 
 
+
 <!-- ========================================================= -->
-<!-- STATISTICS -->
+<!-- ABOUT -->
 <!-- ========================================================= -->
 
-<section class="stats-section">
+<section id="about"
+         class="about-section">
 
     <div class="container">
 
-        <div class="row g-4">
+        <div class="row align-items-center g-5">
 
-            <div class="col-6 col-lg-3">
 
-                <div class="stat-card">
+            <div class="col-lg-6">
 
-                    <div class="stat-number">
-                        10
+                <span class="section-badge">
+                    About EduManage
+                </span>
+
+                <h2 class="mt-3">
+
+                    One Platform for
+                    Academic Management
+
+                </h2>
+
+
+                <p class="about-text">
+
+                    EduManage is a Student Management and Course
+                    Enrollment System designed to simplify academic
+                    administration through a single web application.
+
+                </p>
+
+
+                <p class="about-text">
+
+                    The system connects administrators, students and
+                    faculty with separate role-based dashboards and
+                    provides the tools required for everyday academic
+                    operations.
+
+                </p>
+
+
+                <div class="about-points">
+
+                    <div>
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Admin, Student and Faculty portals
+
                     </div>
 
-                    <div class="stat-label">
-                        TOTAL STUDENTS
+
+                    <div>
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Centralized student and course information
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Secure role-based login
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Enrollment and payment management
+
                     </div>
 
                 </div>
@@ -437,50 +487,110 @@
             </div>
 
 
-            <div class="col-6 col-lg-3">
+            <div class="col-lg-6">
 
-                <div class="stat-card">
+                <div class="support-card">
 
-                    <div class="stat-number green">
-                        8
+                    <div class="text-center">
+
+                        <div class="feature-icon blue mx-auto mb-4">
+
+                            <i class="bi bi-mortarboard-fill"></i>
+
+                        </div>
+
+                        <h3>
+                            EduManage
+                        </h3>
+
+                        <p class="text-muted">
+
+                            Student Management & Course
+                            Enrollment System
+
+                        </p>
+
                     </div>
 
-                    <div class="stat-label">
-                        ACTIVE COURSES
-                    </div>
 
-                </div>
-
-            </div>
+                    <div class="row g-3 mt-3">
 
 
-            <div class="col-6 col-lg-3">
+                        <div class="col-6">
 
-                <div class="stat-card">
+                            <div class="text-center p-3 border rounded">
 
-                    <div class="stat-number purple">
-                        5
-                    </div>
+                                <i class="bi bi-shield-check fs-3 text-primary"></i>
 
-                    <div class="stat-label">
-                        FACULTY MEMBERS
-                    </div>
+                                <div class="fw-semibold mt-2">
+                                    Secure
+                                </div>
 
-                </div>
+                                <small class="text-muted">
+                                    Role-based access
+                                </small>
 
-            </div>
+                            </div>
+
+                        </div>
 
 
-            <div class="col-6 col-lg-3">
+                        <div class="col-6">
 
-                <div class="stat-card">
+                            <div class="text-center p-3 border rounded">
 
-                    <div class="stat-number dark">
-                        10
-                    </div>
+                                <i class="bi bi-database-check fs-3 text-success"></i>
 
-                    <div class="stat-label">
-                        ENROLLMENTS
+                                <div class="fw-semibold mt-2">
+                                    Centralized
+                                </div>
+
+                                <small class="text-muted">
+                                    Academic data
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6">
+
+                            <div class="text-center p-3 border rounded">
+
+                                <i class="bi bi-laptop fs-3 text-primary"></i>
+
+                                <div class="fw-semibold mt-2">
+                                    Web Based
+                                </div>
+
+                                <small class="text-muted">
+                                    Easy access
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6">
+
+                            <div class="text-center p-3 border rounded">
+
+                                <i class="bi bi-people fs-3 text-warning"></i>
+
+                                <div class="fw-semibold mt-2">
+                                    Multi Role
+                                </div>
+
+                                <small class="text-muted">
+                                    Admin, Student, Faculty
+                                </small>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -494,27 +604,32 @@
 </section>
 
 
+
 <!-- ========================================================= -->
 <!-- FEATURES -->
 <!-- ========================================================= -->
 
-<section id="features" class="features-section">
+<section id="features"
+         class="features-section">
 
     <div class="container">
+
 
         <div class="section-heading">
 
             <span class="section-badge">
-                Capabilities
+                Core Features
             </span>
 
             <h2>
-                Comprehensive Academic SaaS Features
+                Everything Your Academic System Needs
             </h2>
 
             <p>
-                Engineered for modern university operations,
-                admissions, and interactive course selection.
+
+                EduManage provides separate tools for
+                administration, students and faculty.
+
             </p>
 
         </div>
@@ -523,24 +638,28 @@
         <div class="row g-4">
 
 
-            <!-- FEATURE 1 -->
+            <!-- ADMIN -->
 
             <div class="col-md-6 col-lg-4">
 
                 <div class="feature-card">
 
                     <div class="feature-icon blue">
-                        <i class="bi bi-people-fill"></i>
+
+                        <i class="bi bi-speedometer2"></i>
+
                     </div>
 
                     <h4>
-                        Student Management
+                        Admin Dashboard
                     </h4>
 
                     <p>
-                        Complete student repository with
-                        multi-attribute filtering, demographic data,
-                        academic records, and CSV batch exports.
+
+                        Manage students, departments, courses,
+                        faculty, enrollments, payments and reports
+                        from one centralized dashboard.
+
                     </p>
 
                 </div>
@@ -548,14 +667,75 @@
             </div>
 
 
-            <!-- FEATURE 2 -->
+            <!-- STUDENTS -->
 
             <div class="col-md-6 col-lg-4">
 
                 <div class="feature-card">
 
                     <div class="feature-icon green">
-                        <i class="bi bi-journal-check"></i>
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+                    <h4>
+                        Student Portal
+                    </h4>
+
+                    <p>
+
+                        Students can manage their profile, browse
+                        available courses, add courses to cart,
+                        enroll, make payments and view their academic
+                        information.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FACULTY -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon purple">
+
+                        <i class="bi bi-person-workspace"></i>
+
+                    </div>
+
+                    <h4>
+                        Faculty Portal
+                    </h4>
+
+                    <p>
+
+                        Faculty can view their courses, see enrolled
+                        students and manage attendance through their
+                        dedicated portal.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon yellow">
+
+                        <i class="bi bi-journal-bookmark-fill"></i>
+
                     </div>
 
                     <h4>
@@ -563,9 +743,11 @@
                     </h4>
 
                     <p>
-                        Course catalog with real-time seat tracking,
-                        syllabus details, credit assignment,
-                        instructor allocation, and availability status.
+
+                        Manage course details, credits, faculty
+                        assignments, capacity, schedules and course
+                        fees.
+
                     </p>
 
                 </div>
@@ -573,49 +755,28 @@
             </div>
 
 
-            <!-- FEATURE 3 -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="feature-card">
-
-                    <div class="feature-icon yellow">
-                        <i class="bi bi-cart-check"></i>
-                    </div>
-
-                    <h4>
-                        Online Enrollment & Cart
-                    </h4>
-
-                    <p>
-                        Interactive student registration with an
-                        e-commerce-style cart, credit validation,
-                        and instant seat updates.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- FEATURE 4 -->
+            <!-- ENROLLMENT -->
 
             <div class="col-md-6 col-lg-4">
 
                 <div class="feature-card">
 
                     <div class="feature-icon red">
-                        <i class="bi bi-person-vcard"></i>
+
+                        <i class="bi bi-cart-check-fill"></i>
+
                     </div>
 
                     <h4>
-                        Faculty Management
+                        Course Enrollment
                     </h4>
 
                     <p>
-                        Instructor profiles, department hierarchy,
-                        teaching assignments, and real-time class
-                        rosters for registered students.
+
+                        Students can browse courses, add them to a
+                        cart, enroll and track their enrollment
+                        history.
+
                     </p>
 
                 </div>
@@ -623,24 +784,28 @@
             </div>
 
 
-            <!-- FEATURE 5 -->
+            <!-- PAYMENT -->
 
             <div class="col-md-6 col-lg-4">
 
                 <div class="feature-card">
 
                     <div class="feature-icon cyan">
-                        <i class="bi bi-wallet2"></i>
+
+                        <i class="bi bi-credit-card-fill"></i>
+
                     </div>
 
                     <h4>
-                        Fee Management & Receipts
+                        Payments & Fees
                     </h4>
 
                     <p>
-                        Simulated checkout with UPI, Card,
-                        and NetBanking modes, generating printable
-                        computerized receipts.
+
+                        Manage course payments and provide students
+                        with payment history, transaction details and
+                        fee information.
+
                     </p>
 
                 </div>
@@ -648,14 +813,44 @@
             </div>
 
 
-            <!-- FEATURE 6 -->
+            <!-- ATTENDANCE -->
 
             <div class="col-md-6 col-lg-4">
 
                 <div class="feature-card">
 
-                    <div class="feature-icon purple">
-                        <i class="bi bi-graph-up-arrow"></i>
+                    <div class="feature-icon orange">
+
+                        <i class="bi bi-calendar-check-fill"></i>
+
+                    </div>
+
+                    <h4>
+                        Attendance
+                    </h4>
+
+                    <p>
+
+                        Faculty can manage attendance for students
+                        enrolled in their assigned courses.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- REPORTS -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon dark">
+
+                        <i class="bi bi-bar-chart-fill"></i>
+
                     </div>
 
                     <h4>
@@ -663,9 +858,40 @@
                     </h4>
 
                     <p>
-                        Interactive Chart.js visualizations for
-                        departmental distribution, enrollment trends,
-                        and financial reporting.
+
+                        Admin can view enrollment, department and
+                        payment information through reports and
+                        dashboard analytics.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATABASE -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon blue">
+
+                        <i class="bi bi-database-fill"></i>
+
+                    </div>
+
+                    <h4>
+                        Centralized Data
+                    </h4>
+
+                    <p>
+
+                        Student, faculty, course, enrollment,
+                        attendance and payment information is stored
+                        in the MySQL database.
+
                     </p>
 
                 </div>
@@ -679,27 +905,32 @@
 </section>
 
 
+
 <!-- ========================================================= -->
-<!-- WORKFLOW -->
+<!-- HOW IT WORKS -->
 <!-- ========================================================= -->
 
-<section id="workflow" class="workflow-section">
+<section id="workflow"
+         class="workflow-section">
 
     <div class="container">
+
 
         <div class="section-heading">
 
             <span class="section-badge green-badge">
-                Student Workflow
+                How It Works
             </span>
 
             <h2>
-                How Course Enrollment Works
+                Simple Role-Based Workflow
             </h2>
 
             <p>
-                A smooth, transparent 6-step journey from
-                course selection to printable receipt.
+
+                Each user gets access to the features relevant
+                to their role.
+
             </p>
 
         </div>
@@ -708,7 +939,9 @@
         <div class="row g-4 workflow-row">
 
 
-            <div class="col-6 col-lg-2">
+            <!-- STEP 1 -->
+
+            <div class="col-6 col-lg-3">
 
                 <div class="workflow-step">
 
@@ -721,7 +954,7 @@
                     </h5>
 
                     <p>
-                        Login with your assigned credentials.
+                        Login using your registered credentials.
                     </p>
 
                 </div>
@@ -729,7 +962,9 @@
             </div>
 
 
-            <div class="col-6 col-lg-2">
+            <!-- STEP 2 -->
+
+            <div class="col-6 col-lg-3">
 
                 <div class="workflow-step">
 
@@ -738,12 +973,11 @@
                     </div>
 
                     <h5>
-                        Select Courses
+                        Role Verification
                     </h5>
 
                     <p>
-                        Browse subjects by department,
-                        credits, and timing.
+                        EduManage identifies Admin, Student or Faculty.
                     </p>
 
                 </div>
@@ -751,7 +985,9 @@
             </div>
 
 
-            <div class="col-6 col-lg-2">
+            <!-- STEP 3 -->
+
+            <div class="col-6 col-lg-3">
 
                 <div class="workflow-step">
 
@@ -760,12 +996,11 @@
                     </div>
 
                     <h5>
-                        Add to Cart
+                        Open Dashboard
                     </h5>
 
                     <p>
-                        Review credits, fees,
-                        and course capacity.
+                        Access the dashboard according to your role.
                     </p>
 
                 </div>
@@ -773,7 +1008,9 @@
             </div>
 
 
-            <div class="col-6 col-lg-2">
+            <!-- STEP 4 -->
+
+            <div class="col-6 col-lg-3">
 
                 <div class="workflow-step">
 
@@ -782,12 +1019,43 @@
                     </div>
 
                     <h5>
-                        Enroll
+                        Manage Activities
                     </h5>
 
                     <p>
-                        Confirm course selection
-                        and secure your seat.
+                        Perform the academic operations available
+                        to your role.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ROLE FLOW -->
+
+        <div class="row g-4 mt-4">
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <div class="feature-icon blue mx-auto">
+
+                        <i class="bi bi-shield-lock-fill"></i>
+
+                    </div>
+
+                    <h4>
+                        Admin
+                    </h4>
+
+                    <p>
+                        Students, departments, courses, faculty,
+                        enrollments, payments and reports.
                     </p>
 
                 </div>
@@ -795,21 +1063,23 @@
             </div>
 
 
-            <div class="col-6 col-lg-2">
+            <div class="col-md-4">
 
-                <div class="workflow-step">
+                <div class="feature-card text-center">
 
-                    <div class="step-number">
-                        5
+                    <div class="feature-icon green mx-auto">
+
+                        <i class="bi bi-person-fill"></i>
+
                     </div>
 
-                    <h5>
-                        Pay Fees
-                    </h5>
+                    <h4>
+                        Student
+                    </h4>
 
                     <p>
-                        Simulate online payment
-                        via UPI or Card.
+                        Profile, courses, cart, enrollment,
+                        payments, schedule and fees.
                     </p>
 
                 </div>
@@ -817,21 +1087,23 @@
             </div>
 
 
-            <div class="col-6 col-lg-2">
+            <div class="col-md-4">
 
-                <div class="workflow-step">
+                <div class="feature-card text-center">
 
-                    <div class="step-number">
-                        6
+                    <div class="feature-icon purple mx-auto">
+
+                        <i class="bi bi-person-workspace"></i>
+
                     </div>
 
-                    <h5>
-                        Get Receipt
-                    </h5>
+                    <h4>
+                        Faculty
+                    </h4>
 
                     <p>
-                        Print your official
-                        computerized receipt.
+                        Profile, assigned courses, students and
+                        attendance.
                     </p>
 
                 </div>
@@ -845,191 +1117,115 @@
 </section>
 
 
+
 <!-- ========================================================= -->
-<!-- COURSES -->
+<!-- CONTACT -->
 <!-- ========================================================= -->
 
-<section id="courses" class="featured-section">
+<section id="contact"
+         class="about-section">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="row justify-content-center">
 
-            <span class="section-badge">
-                Course Catalog
-            </span>
+            <div class="col-lg-9">
 
-            <h2>
-                Featured Courses
-            </h2>
-
-            <p>
-                Explore available courses and enroll through
-                your student portal.
-            </p>
-
-        </div>
+                <div class="support-card text-center">
 
 
-        <div class="row g-4">
-
-
-            <!-- COURSE 1 -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="course-card">
-
-                    <span class="course-code">
-                        CS101
+                    <span class="section-badge">
+                        Contact
                     </span>
 
-                    <h4>
-                        Data Structures
-                    </h4>
 
-                    <p>
-                        Learn arrays, linked lists, stacks,
-                        queues, trees and graphs.
+                    <h2 class="mt-3">
+                        Need Help With EduManage?
+                    </h2>
+
+
+                    <p class="about-text mx-auto">
+
+                        For accessing EduManage, use the
+                        <strong>Sign In</strong> button.
+                        Your access and available features depend
+                        on your assigned role.
+
                     </p>
 
-                    <div class="course-info">
 
-                        <span>
-                            <i class="bi bi-award"></i>
-                            4 Credits
-                        </span>
-
-                        <span>
-                            <i class="bi bi-people"></i>
-                            48/60 Seats
-                        </span>
-
-                    </div>
+                    <div class="row g-3 mt-4">
 
 
-                    <div class="course-bottom">
+                        <div class="col-md-4">
 
-                        <strong>
-                            ₹15,000
-                        </strong>
+                            <div class="p-4 border rounded h-100">
 
-                        <a href="${pageContext.request.contextPath}/login"
-                           class="btn btn-sm btn-primary">
+                                <i class="bi bi-person-lock fs-2 text-primary"></i>
 
-                            View Course
+                                <h5 class="mt-3">
+                                    Login
+                                </h5>
 
-                        </a>
+                                <p class="text-muted mb-0">
+                                    Access your EduManage portal.
+                                </p>
 
-                    </div>
+                            </div>
 
-                </div>
-
-            </div>
+                        </div>
 
 
-            <!-- COURSE 2 -->
+                        <div class="col-md-4">
 
-            <div class="col-md-6 col-lg-4">
+                            <div class="p-4 border rounded h-100">
 
-                <div class="course-card">
+                                <i class="bi bi-shield-check fs-2 text-success"></i>
 
-                    <span class="course-code green-code">
-                        IT201
-                    </span>
+                                <h5 class="mt-3">
+                                    Role Access
+                                </h5>
 
-                    <h4>
-                        Modern Web Applications
-                    </h4>
+                                <p class="text-muted mb-0">
+                                    Admin, Student and Faculty access.
+                                </p>
 
-                    <p>
-                        Build modern responsive web applications
-                        using current technologies.
-                    </p>
+                            </div>
 
-                    <div class="course-info">
+                        </div>
 
-                        <span>
-                            <i class="bi bi-award"></i>
-                            4 Credits
-                        </span>
 
-                        <span>
-                            <i class="bi bi-people"></i>
-                            49/50 Seats
-                        </span>
+                        <div class="col-md-4">
+
+                            <div class="p-4 border rounded h-100">
+
+                                <i class="bi bi-headset fs-2 text-warning"></i>
+
+                                <h5 class="mt-3">
+                                    Academic Support
+                                </h5>
+
+                                <p class="text-muted mb-0">
+                                    Use the appropriate portal for
+                                    your academic activities.
+                                </p>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
 
-                    <div class="course-bottom">
+                    <a
+                        href="${pageContext.request.contextPath}/login"
+                        class="btn btn-primary btn-lg mt-4">
 
-                        <strong>
-                            ₹12,500
-                        </strong>
+                        <i class="bi bi-box-arrow-in-right me-2"></i>
 
-                        <a href="${pageContext.request.contextPath}/login"
-                           class="btn btn-sm btn-primary">
+                        Sign In to EduManage
 
-                            View Course
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- COURSE 3 -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="course-card">
-
-                    <span class="course-code purple-code">
-                        AI301
-                    </span>
-
-                    <h4>
-                        Artificial Intelligence
-                    </h4>
-
-                    <p>
-                        Explore machine learning, neural networks,
-                        NLP and intelligent systems.
-                    </p>
-
-                    <div class="course-info">
-
-                        <span>
-                            <i class="bi bi-award"></i>
-                            5 Credits
-                        </span>
-
-                        <span>
-                            <i class="bi bi-people"></i>
-                            32/50 Seats
-                        </span>
-
-                    </div>
-
-
-                    <div class="course-bottom">
-
-                        <strong>
-                            ₹18,000
-                        </strong>
-
-                        <a href="${pageContext.request.contextPath}/login"
-                           class="btn btn-sm btn-primary">
-
-                            View Course
-
-                        </a>
-
-                    </div>
+                    </a>
 
                 </div>
 
@@ -1041,157 +1237,6 @@
 
 </section>
 
-
-<!-- ========================================================= -->
-<!-- ABOUT + CONTACT -->
-<!-- ========================================================= -->
-
-<section id="about" class="about-section">
-
-    <div class="container">
-
-        <div class="row align-items-center g-5">
-
-
-            <!-- ABOUT -->
-
-            <div class="col-lg-6">
-
-                <h2>
-                    Designed for Universities,
-                    Built for Performance
-                </h2>
-
-                <p class="about-text">
-
-                    EduManage replaces legacy paper systems
-                    with a cohesive, responsive digital architecture.
-                    Designed with strict accessibility, instant search
-                    filters, and real-time academic management.
-
-                </p>
-
-
-                <div class="about-points">
-
-                    <div>
-                        <i class="bi bi-check-circle"></i>
-
-                        Role-segregated views for Students,
-                        Faculty, and Admin
-
-                    </div>
-
-                    <div>
-                        <i class="bi bi-check-circle"></i>
-
-                        Comprehensive course and seat management
-
-                    </div>
-
-                    <div>
-                        <i class="bi bi-check-circle"></i>
-
-                        Secure MySQL-powered academic data
-
-                    </div>
-
-                </div>
-
-
-                <a href="${pageContext.request.contextPath}/login"
-                   class="btn btn-primary btn-lg mt-3">
-
-                    Get Started Today
-
-                </a>
-
-            </div>
-
-
-            <!-- CONTACT -->
-
-            <div class="col-lg-6" id="contact">
-
-                <div class="support-card">
-
-                    <h3>
-                        Academic Inquiries & Support
-                    </h3>
-
-
-                    <div class="support-item">
-
-                        <div class="support-icon">
-                            <i class="bi bi-geo-alt"></i>
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Office of Academic Affairs
-                            </strong>
-
-                            <p>
-                                University Road, Pune,
-                                Maharashtra 411007
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="support-item">
-
-                        <div class="support-icon">
-                            <i class="bi bi-envelope"></i>
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Email Support
-                            </strong>
-
-                            <p>
-                                support@edumanage.com
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="support-item">
-
-                        <div class="support-icon">
-                            <i class="bi bi-telephone"></i>
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Helpline
-                            </strong>
-
-                            <p>
-                                +91 (020) 2560-1234
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 <!-- ========================================================= -->
@@ -1202,21 +1247,26 @@
 
     <div class="container">
 
+
         <div class="row g-5">
 
 
             <!-- BRAND -->
 
-            <div class="col-lg-5">
+            <div class="col-lg-6">
 
                 <div class="footer-brand">
 
                     <span class="brand-icon">
+
                         <i class="bi bi-mortarboard-fill"></i>
+
                     </span>
 
                     <span class="brand-text">
+
                         Edu<span>Manage</span>
+
                     </span>
 
                 </div>
@@ -1224,33 +1274,42 @@
 
                 <p>
 
-                    Modern Student Management & Course Enrollment
-                    System built with Spring MVC, JSP, MySQL,
-                    Bootstrap 5 and secure role-based access.
+                    Student Management & Course Enrollment System
+                    for managing academic activities through
+                    Admin, Student and Faculty portals.
 
                 </p>
 
             </div>
 
 
-            <!-- PORTALS -->
+            <!-- QUICK LINKS -->
 
             <div class="col-6 col-lg-3">
 
                 <h6>
-                    PORTALS
+                    QUICK LINKS
                 </h6>
 
-                <a href="${pageContext.request.contextPath}/login">
-                    Admin Portal
+
+                <a href="#home">
+                    Home
                 </a>
 
-                <a href="${pageContext.request.contextPath}/login">
-                    Student Portal
+                <a href="#about">
+                    About
                 </a>
 
-                <a href="${pageContext.request.contextPath}/login">
-                    Faculty Portal
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="#workflow">
+                    How It Works
+                </a>
+
+                <a href="#contact">
+                    Contact
                 </a>
 
             </div>
@@ -1258,20 +1317,42 @@
 
             <!-- TECHNOLOGY -->
 
-            <div class="col-6 col-lg-4">
+            <div class="col-6 col-lg-3">
 
                 <h6>
                     TECHNOLOGY
                 </h6>
 
+
                 <div class="tech-tags">
 
-                    <span>Java</span>
-                    <span>Spring MVC</span>
-                    <span>JSP</span>
-                    <span>MySQL</span>
-                    <span>Bootstrap 5</span>
-                    <span>JavaScript</span>
+                    <span>
+                        Java 21
+                    </span>
+
+                    <span>
+                        Spring MVC
+                    </span>
+
+                    <span>
+                        JSP
+                    </span>
+
+                    <span>
+                        MySQL
+                    </span>
+
+                    <span>
+                        JDBC
+                    </span>
+
+                    <span>
+                        Bootstrap 5
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
 
                 </div>
 
@@ -1286,7 +1367,7 @@
         <div class="footer-bottom">
 
             <span>
-                © 2026 EduManage. All rights reserved.
+                © 2026 EduManage
             </span>
 
             <span>
@@ -1298,6 +1379,7 @@
     </div>
 
 </footer>
+
 
 
 <!-- Bootstrap JS -->

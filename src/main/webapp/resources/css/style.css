@@ -1083,7 +1083,552 @@ a {
     padding: 55px 0;
 }
 
+/* =========================================================
+   EDUMANAGE HOME PAGE - FINAL UI
+   Scoped only to .home-page
+   ========================================================= */
 
+.home-page {
+    background: #ffffff;
+    color: #111827;
+}
+
+/* ---------------------------------------------------------
+   CONTAINER
+   --------------------------------------------------------- */
+
+.home-page .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
+/* ---------------------------------------------------------
+   NAVBAR
+   --------------------------------------------------------- */
+
+.home-page .navbar {
+    min-height: 76px;
+    padding: 0;
+}
+
+.home-page .navbar .container {
+    min-height: 76px;
+}
+
+.home-page .navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.home-page .brand-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 21px;
+}
+
+.home-page .navbar-nav {
+    gap: 4px !important;
+}
+
+.home-page .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px !important;
+}
+
+.home-page .navbar .btn {
+    min-height: 46px;
+    padding: 8px 22px;
+    font-size: 16px;
+    border-radius: 9px;
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.home-page .hero-section {
+    padding: 72px 0 68px;
+    min-height: auto;
+}
+
+.home-page .hero-title {
+    max-width: 700px;
+    font-size: clamp(42px, 4.5vw, 62px);
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+    margin-bottom: 0;
+}
+
+.home-page .hero-description {
+    max-width: 680px;
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
+.home-page .hero-badge {
+    padding: 7px 16px;
+    font-size: 14px;
+}
+
+.home-page .hero-btn {
+    min-height: 50px;
+    padding: 10px 21px;
+    font-size: 16px;
+}
+
+.home-page .hero-points {
+    gap: 18px;
+    font-size: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   HERO DEMO CARD
+   --------------------------------------------------------- */
+
+.home-page .demo-card {
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.10),
+        0 3px 10px rgba(15, 23, 42, 0.05);
+}
+
+.home-page .demo-header {
+    min-height: 56px;
+    padding: 0 16px;
+    border-radius: 11px;
+}
+
+.home-page .demo-header strong {
+    font-size: 14px;
+}
+
+.home-page .online-badge {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.home-page .demo-body {
+    padding: 24px 18px 18px;
+}
+
+.home-page .demo-body h5 {
+    font-size: 19px;
+}
+
+.home-page .demo-course {
+    padding: 15px;
+    margin-top: 12px;
+}
+
+.home-page .demo-course strong {
+    font-size: 15px;
+}
+
+.home-page .demo-body .btn {
+    min-height: 46px;
+    font-size: 15px;
+}
+
+
+/* ---------------------------------------------------------
+   COMMON SECTION
+   --------------------------------------------------------- */
+
+.home-page .section-heading {
+    max-width: 720px;
+    margin: 0 auto 42px;
+}
+
+.home-page .section-heading h2 {
+    font-size: clamp(32px, 3.5vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
+}
+
+.home-page .section-heading p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.home-page .section-badge {
+    padding: 5px 16px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   ABOUT
+   --------------------------------------------------------- */
+
+.home-page .about-section {
+    padding: 72px 0;
+}
+
+.home-page .about-section h2 {
+    font-size: clamp(32px, 3.5vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.home-page .about-text {
+    max-width: 650px;
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+.home-page .about-points {
+    gap: 13px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.home-page .about-points i {
+    font-size: 18px;
+}
+
+.home-page .support-card {
+    padding: 28px;
+    border-radius: 16px;
+}
+
+
+/* ---------------------------------------------------------
+   FEATURES
+   --------------------------------------------------------- */
+
+.home-page .features-section {
+    padding: 72px 0;
+    background: #f7f9fc;
+}
+
+.home-page .feature-card {
+    min-height: 220px;
+    padding: 25px;
+    border-radius: 14px;
+}
+
+.home-page .feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 13px;
+    font-size: 25px;
+    margin-bottom: 17px;
+}
+
+.home-page .feature-card h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.home-page .feature-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   WORKFLOW
+   --------------------------------------------------------- */
+
+.home-page .workflow-section {
+    padding: 72px 0;
+}
+
+.home-page .workflow-row {
+    margin-top: 45px;
+}
+
+.home-page .workflow-step {
+    padding: 0 12px;
+}
+
+.home-page .step-number {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+
+.home-page .workflow-step h5 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.home-page .workflow-step p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   ROLE CARDS
+   --------------------------------------------------------- */
+
+.home-page .workflow-section .feature-card {
+    min-height: 190px;
+    text-align: center;
+}
+
+.home-page .workflow-section .feature-card .feature-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   CONTACT
+   --------------------------------------------------------- */
+
+.home-page #contact {
+    padding: 72px 0;
+    background: #f7f9fc;
+}
+
+.home-page #contact .support-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 38px;
+    text-align: center;
+}
+
+.home-page #contact .support-card h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.home-page #contact .about-text {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-page #contact .border {
+    background: #ffffff;
+    border-color: #e1e6ed !important;
+    border-radius: 12px;
+}
+
+.home-page #contact .btn {
+    min-height: 48px;
+    padding: 10px 22px;
+    font-size: 16px;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+.home-page .footer {
+    padding: 48px 0 20px;
+}
+
+.home-page .footer-brand {
+    margin-bottom: 14px;
+}
+
+.home-page .footer .brand-text {
+    font-size: 24px;
+}
+
+.home-page .footer p {
+    max-width: 500px;
+    font-size: 14px;
+}
+
+.home-page .footer h6 {
+    margin-bottom: 15px;
+}
+
+.home-page .footer a {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.home-page .tech-tags {
+    gap: 6px;
+}
+
+.home-page .tech-tags span {
+    padding: 5px 9px;
+    font-size: 12px;
+}
+
+.home-page .footer hr {
+    margin: 30px 0 18px;
+}
+
+.home-page .footer-bottom {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .home-page .hero-section {
+        padding: 60px 0;
+    }
+
+    .home-page .hero-title {
+        font-size: 50px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .home-page .navbar {
+        min-height: 70px;
+    }
+
+    .home-page .navbar .container {
+        min-height: 70px;
+    }
+
+    .home-page .navbar-collapse {
+        padding: 15px 0;
+    }
+
+    .home-page .navbar .d-flex {
+        margin-top: 10px;
+    }
+
+    .home-page .hero-section {
+        padding: 55px 0;
+    }
+
+    .home-page .hero-title {
+        font-size: 46px;
+    }
+
+    .home-page .demo-card {
+        max-width: 620px;
+        margin: 10px auto 0;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .home-page .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .home-page .hero-section {
+        padding: 45px 0;
+    }
+
+    .home-page .hero-title {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .home-page .hero-description {
+        font-size: 16px;
+    }
+
+    .home-page .hero-btn {
+        width: auto;
+    }
+
+    .home-page .hero-points {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .home-page .features-section,
+    .home-page .workflow-section,
+    .home-page .about-section,
+    .home-page #contact {
+        padding: 55px 0;
+    }
+
+    .home-page .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .home-page .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .home-page .feature-card {
+        min-height: auto;
+        padding: 23px;
+    }
+
+    .home-page #contact .support-card {
+        padding: 25px 18px;
+    }
+
+    .home-page #contact .support-card h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .home-page .navbar-brand {
+        font-size: 20px;
+    }
+
+    .home-page .brand-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .home-page .hero-title {
+        font-size: 32px;
+    }
+
+    .home-page .hero-badge {
+        font-size: 12px;
+    }
+
+    .home-page .hero-btn {
+        width: 100%;
+    }
+
+    .home-page .demo-body {
+        padding: 20px 12px 15px;
+    }
+
+    .home-page .demo-course {
+        padding: 12px;
+    }
+
+    .home-page .feature-card h4 {
+        font-size: 19px;
+    }
+
+    .home-page .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
 /* =========================================================
    LOGIN CARD
    ========================================================= */
@@ -8906,6 +9451,2118 @@ textarea.form-control {
         height: 60px;
 
         font-size: 25px;
+    }
+
+}
+/* =========================================================
+   FACULTY PORTAL
+   ========================================================= */
+
+.faculty-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+
+    background: #111827;
+    color: #ffffff;
+
+    z-index: 1050;
+
+    overflow-y: auto;
+}
+
+
+.faculty-brand {
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 24px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.faculty-brand-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #4f46e5;
+
+    font-size: 20px;
+}
+
+
+.faculty-brand-name {
+    margin-left: 12px;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+
+.faculty-brand-subtitle {
+    margin-left: 12px;
+
+    margin-top: 1px;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+
+.faculty-menu {
+    padding: 22px 14px;
+}
+
+
+.faculty-menu-label {
+    padding: 0 12px 9px;
+
+    color: #6b7280;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.faculty-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 14px;
+
+    margin-bottom: 5px;
+
+    border-radius: 9px;
+
+    color: #d1d5db;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+
+.faculty-menu-item i {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+.faculty-menu-item:hover {
+    background: rgba(255,255,255,0.07);
+
+    color: #ffffff;
+}
+
+
+.faculty-menu-item[href$="/faculty/dashboard"] {
+    background: #4f46e5;
+
+    color: #ffffff;
+}
+
+
+.faculty-logout {
+    color: #fca5a5;
+}
+
+
+.faculty-logout:hover {
+    background: rgba(239,68,68,0.12);
+
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   FACULTY NAVBAR
+   ========================================================= */
+
+.faculty-navbar {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    left: 280px;
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eaecf0;
+
+    z-index: 1000;
+}
+
+
+.faculty-navbar-title {
+    color: #172033;
+}
+
+
+.faculty-navbar-right {
+    display: flex;
+
+    align-items: center;
+}
+
+
+.faculty-user-info {
+    display: flex;
+
+    align-items: center;
+}
+
+
+.faculty-user-avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 18px;
+}
+
+
+.faculty-user-details {
+    margin-left: 11px;
+}
+
+
+.faculty-user-name {
+    color: #172033;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.faculty-user-role {
+    margin-top: 2px;
+
+    color: #98a2b3;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.faculty-main-content {
+    margin-left: 280px;
+
+    padding: 112px 30px 35px;
+
+    min-height: 100vh;
+
+    background: #f8f9fc;
+}
+
+
+.faculty-page-header {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   STAT CARDS
+   ========================================================= */
+
+.faculty-stat-card {
+    border-radius: 14px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+.faculty-stat-card:hover {
+    transform: translateY(-2px);
+}
+
+
+.faculty-stat-label {
+    color: #667085;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.faculty-stat-value {
+    margin: 8px 0 4px;
+
+    color: #172033;
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+
+.faculty-stat-description {
+    color: #98a2b3;
+
+    font-size: 11px;
+}
+
+
+.faculty-stat-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+
+.faculty-icon-blue {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+
+.faculty-icon-green {
+    background: #ecfdf3;
+    color: #059669;
+}
+
+
+.faculty-icon-purple {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+
+.faculty-icon-orange {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+
+.faculty-department-value {
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.faculty-profile-avatar {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 24px;
+}
+
+
+.faculty-info-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+
+.faculty-info-item {
+    display: flex;
+
+    align-items: center;
+}
+
+
+.faculty-info-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f2f4f7;
+
+    color: #667085;
+
+    font-size: 15px;
+}
+
+
+.faculty-info-item > div:last-child {
+    margin-left: 12px;
+}
+
+
+.faculty-info-label {
+    color: #98a2b3;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+
+.faculty-info-value {
+    margin-top: 2px;
+
+    color: #344054;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ACADEMIC OVERVIEW
+   ========================================================= */
+
+.faculty-overview-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+}
+
+
+.faculty-overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.faculty-overview-item {
+    padding: 20px;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 11px;
+
+    text-align: center;
+}
+
+
+.faculty-overview-number {
+    color: #172033;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+.faculty-overview-label {
+    margin-top: 4px;
+
+    color: #667085;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.faculty-quick-action {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 50px;
+
+    padding: 12px;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #475467;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+
+.faculty-quick-action i {
+    color: #4f46e5;
+
+    font-size: 16px;
+}
+
+
+.faculty-quick-action:hover {
+    border-color: #c7d2fe;
+
+    background: #f8faff;
+
+    color: #4f46e5;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .faculty-sidebar {
+        width: 240px;
+    }
+
+    .faculty-navbar {
+        left: 240px;
+    }
+
+    .faculty-main-content {
+        margin-left: 240px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .faculty-sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    .faculty-brand {
+        height: 70px;
+    }
+
+
+    .faculty-menu {
+        padding: 12px;
+    }
+
+
+    .faculty-navbar {
+        position: relative;
+
+        left: 0;
+
+        height: 70px;
+
+        padding: 0 15px;
+    }
+
+
+    .faculty-main-content {
+        margin-left: 0;
+
+        padding: 25px 15px;
+    }
+
+
+    .faculty-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .faculty-user-details {
+        display: none;
+    }
+
+}
+
+/* =========================================================
+   FACULTY PROFILE
+   ========================================================= */
+
+.faculty-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.faculty-content-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.faculty-content-header h2 i {
+    margin-right: 8px;
+}
+
+.faculty-content-header p {
+    margin: 7px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* Profile Card */
+
+.faculty-profile-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Profile Header */
+
+.faculty-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faculty-profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background: #eef2ff;
+}
+
+.faculty-profile-heading h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.faculty-profile-heading p {
+    margin: 5px 0 10px;
+    color: #6b7280;
+}
+
+.faculty-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #ecfdf5;
+    color: #047857;
+}
+
+
+/* Profile Body */
+
+.faculty-profile-body {
+    padding: 30px;
+}
+
+
+/* Section Title */
+
+.faculty-section-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.faculty-section-title i {
+    font-size: 19px;
+}
+
+.faculty-section-spacing {
+    margin-top: 35px;
+}
+
+
+/* Profile Grid */
+
+.faculty-profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+
+/* Profile Item */
+
+.faculty-profile-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+.faculty-profile-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    font-size: 20px;
+}
+
+.faculty-profile-item span {
+    display: block;
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.faculty-profile-item strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .faculty-profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-profile-header {
+        padding: 22px;
+    }
+
+    .faculty-profile-body {
+        padding: 22px;
+    }
+
+    .faculty-profile-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .faculty-profile-heading h3 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .faculty-profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .faculty-content-header h2 {
+        font-size: 23px;
+    }
+
+    .faculty-profile-item {
+        padding: 14px;
+    }
+}
+/* =========================================================
+   FACULTY MY COURSES
+   ========================================================= */
+
+.faculty-course-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.faculty-course-count i {
+    font-size: 17px;
+}
+
+
+/* Course Grid */
+
+.faculty-course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+
+/* Course Card */
+
+.faculty-course-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.faculty-course-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Card Top */
+
+.faculty-course-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 22px;
+    border-bottom: 1px solid #eef0f3;
+}
+
+.faculty-course-code {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 7px 11px;
+    border-radius: 8px;
+    background: #f1f5f9;
+}
+
+.faculty-course-credits {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+
+/* Card Body */
+
+.faculty-course-body {
+    padding: 22px;
+}
+
+.faculty-course-body h3 {
+    margin: 0 0 9px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.faculty-course-description {
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* Course Info */
+
+.faculty-course-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.faculty-course-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4b5563;
+    font-size: 13px;
+}
+
+.faculty-course-info i {
+    font-size: 16px;
+}
+
+
+/* Capacity */
+
+.faculty-course-capacity {
+    padding: 15px;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.faculty-capacity-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.faculty-capacity-header strong {
+    color: #111827;
+    font-size: 13px;
+}
+
+.faculty-capacity-bar {
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e5e7eb;
+}
+
+.faculty-capacity-progress {
+    height: 100%;
+    border-radius: 10px;
+    background: #4f46e5;
+}
+
+.faculty-capacity-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+
+/* Card Footer */
+
+.faculty-course-card-footer {
+    padding: 16px 22px;
+    border-top: 1px solid #eef0f3;
+}
+
+.faculty-course-details-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.faculty-course-details-btn:hover {
+    text-decoration: none;
+}
+
+
+/* Empty State */
+
+.faculty-empty-state {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    text-align: center;
+    padding: 70px 30px;
+}
+
+.faculty-empty-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    font-size: 30px;
+}
+
+.faculty-empty-state h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.faculty-empty-state p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FACULTY COURSE DETAILS
+   ========================================================= */
+
+.faculty-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.faculty-back-link:hover {
+    text-decoration: none;
+}
+
+
+.faculty-course-detail-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Detail Header */
+
+.faculty-course-detail-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 32px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faculty-detail-course-code {
+    display: inline-block;
+    padding: 7px 11px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.faculty-course-detail-header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.faculty-course-detail-header p {
+    margin: 0;
+    max-width: 700px;
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.faculty-detail-credits {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faculty-detail-credits strong {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.faculty-detail-credits span {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* Detail Section */
+
+.faculty-detail-section {
+    padding: 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faculty-detail-section:last-child {
+    border-bottom: none;
+}
+
+
+/* Detail Grid */
+
+.faculty-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.faculty-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+.faculty-detail-item > i {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    font-size: 18px;
+}
+
+.faculty-detail-item span {
+    display: block;
+    margin-bottom: 4px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.faculty-detail-item strong {
+    display: block;
+    font-size: 14px;
+}
+
+
+/* Student Stats */
+
+.faculty-student-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.faculty-student-stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+    background: #fafafa;
+}
+
+.faculty-student-stat-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    font-size: 20px;
+}
+
+.faculty-student-stat span {
+    display: block;
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.faculty-student-stat strong {
+    display: block;
+    font-size: 22px;
+}
+
+
+/* Detail Capacity */
+
+.faculty-detail-capacity {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 13px;
+}
+
+.faculty-capacity-large {
+    height: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .faculty-course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-student-stat-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .faculty-course-info {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-course-detail-header {
+        flex-direction: column;
+    }
+
+    .faculty-detail-credits {
+        width: 90px;
+        min-width: 90px;
+        height: 90px;
+    }
+
+    .faculty-course-count {
+        display: none;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .faculty-course-card-top {
+        padding: 16px;
+    }
+
+    .faculty-course-body {
+        padding: 18px;
+    }
+
+    .faculty-course-detail-header {
+        padding: 22px;
+    }
+
+    .faculty-detail-section {
+        padding: 22px;
+    }
+
+    .faculty-course-detail-header h1 {
+        font-size: 23px;
+    }
+}
+
+/* =========================================================
+   FACULTY STUDENTS
+   ========================================================= */
+
+.faculty-student-search-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 22px;
+}
+
+.faculty-student-search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faculty-search-input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.faculty-search-input-wrapper i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.faculty-search-input-wrapper input {
+    width: 100%;
+    height: 44px;
+    padding: 0 15px 0 42px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    outline: none;
+    font-size: 13px;
+}
+
+.faculty-search-input-wrapper input:focus {
+    border-color: #6366f1;
+}
+
+.faculty-search-btn {
+    height: 44px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faculty-clear-search {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 44px;
+    padding: 0 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Students Table */
+
+.faculty-students-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.faculty-students-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.faculty-students-table {
+    width: 100%;
+    min-width: 950px;
+    border-collapse: collapse;
+}
+
+.faculty-students-table th {
+    padding: 15px 18px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.faculty-students-table td {
+    padding: 17px 18px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.faculty-students-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.faculty-students-table tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* Student Name */
+
+.faculty-student-name {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.faculty-student-avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    font-size: 17px;
+}
+
+.faculty-student-name strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.faculty-student-name span {
+    display: block;
+    margin-top: 3px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+
+/* Roll */
+
+.faculty-roll-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 7px;
+    background: #f1f5f9;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Department */
+
+.faculty-table-department strong,
+.faculty-table-course strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.faculty-table-department span,
+.faculty-table-course span {
+    display: block;
+    margin-top: 3px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+
+/* Enrollment Status */
+
+.faculty-enrollment-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.faculty-enrollment-status.enrolled {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.faculty-enrollment-status.completed {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.faculty-enrollment-status.dropped {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+
+/* Grade */
+
+.faculty-grade-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: 7px;
+    background: #f1f5f9;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.faculty-no-grade {
+    color: #9ca3af;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* View Button */
+
+.faculty-view-student-btn {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #f1f5f9;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   FACULTY STUDENT DETAILS
+   ========================================================= */
+
+.faculty-student-detail-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.faculty-student-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faculty-student-large-avatar {
+    width: 82px;
+    height: 82px;
+    min-width: 82px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    font-size: 36px;
+}
+
+.faculty-student-detail-name h1 {
+    margin: 0 0 6px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.faculty-student-detail-name p {
+    margin: 0 0 10px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* Detail Sections */
+
+.faculty-student-detail-section {
+    padding: 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faculty-student-detail-section:last-child {
+    border-bottom: none;
+}
+
+
+/* Enrollment Box */
+
+.faculty-student-enrollment-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+    border-radius: 13px;
+    background: #f8fafc;
+}
+
+.faculty-student-enrollment-box span {
+    display: block;
+    margin-bottom: 6px;
+    color: #6b7280;
+    font-size: 11px;
+}
+
+.faculty-student-enrollment-box strong {
+    display: block;
+    font-size: 14px;
+}
+
+.faculty-grade-large {
+    font-size: 22px !important;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .faculty-student-enrollment-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .faculty-student-search-form {
+        flex-wrap: wrap;
+    }
+
+    .faculty-search-input-wrapper {
+        flex-basis: 100%;
+    }
+
+    .faculty-student-detail-header {
+        padding: 22px;
+    }
+
+    .faculty-student-detail-section {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .faculty-student-enrollment-box {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-student-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================================
+   FACULTY ATTENDANCE
+   ========================================================= */
+
+.faculty-attendance-filter-card {
+    background: #ffffff;
+    border: 1px solid #e8eaf0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.faculty-attendance-filter-header {
+    margin-bottom: 20px;
+}
+
+.faculty-attendance-filter-header h5 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #202124;
+}
+
+.faculty-attendance-filter-header h5 i {
+    margin-right: 8px;
+}
+
+.faculty-attendance-filter-header p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.faculty-attendance-filter-form {
+    display: grid;
+    grid-template-columns: 1fr 220px auto;
+    gap: 18px;
+    align-items: end;
+}
+
+.faculty-attendance-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.faculty-attendance-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.faculty-attendance-field .form-select,
+.faculty-attendance-field .form-control {
+    min-height: 44px;
+    border: 1px solid #dfe2e8;
+    border-radius: 9px;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+.faculty-attendance-field .form-select:focus,
+.faculty-attendance-field .form-control:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.10);
+}
+
+.faculty-attendance-filter-action {
+    display: flex;
+    align-items: end;
+}
+
+.faculty-attendance-load-btn {
+    min-height: 44px;
+    padding: 0 20px;
+    border-radius: 9px;
+    border: none;
+    background: #6c63ff;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.faculty-attendance-load-btn:hover {
+    background: #5951e6;
+    color: #ffffff;
+}
+
+
+/* Selected course */
+
+.faculty-attendance-course-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid #e8eaf0;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.faculty-attendance-course-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.faculty-attendance-course-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0efff;
+    color: #6c63ff;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+.faculty-attendance-course-info h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #202124;
+}
+
+.faculty-attendance-course-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+.faculty-attendance-course-meta {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.faculty-attendance-course-meta i {
+    margin-right: 5px;
+    color: #6c63ff;
+}
+
+
+/* Attendance table */
+
+.faculty-attendance-table-card {
+    background: #ffffff;
+    border: 1px solid #e8eaf0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.faculty-attendance-table-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.faculty-attendance-table-header h5 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #202124;
+}
+
+.faculty-attendance-table-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+.faculty-attendance-table {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.faculty-attendance-table thead th {
+    padding: 15px 18px;
+    background: #f8f9fb;
+    border-bottom: 1px solid #e7e8ec;
+    color: #666;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.faculty-attendance-table tbody td {
+    padding: 15px 18px;
+    border-bottom: 1px solid #f0f1f3;
+    color: #444;
+    font-size: 14px;
+}
+
+.faculty-attendance-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.faculty-attendance-table tbody tr:hover {
+    background: #fafaff;
+}
+
+
+/* Student */
+
+.faculty-attendance-student {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.faculty-attendance-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeaff;
+    color: #6c63ff;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.faculty-attendance-student-name {
+    font-weight: 600;
+    color: #252525;
+}
+
+.faculty-attendance-roll {
+    display: inline-flex;
+    padding: 5px 9px;
+    border-radius: 7px;
+    background: #f4f5f7;
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.faculty-attendance-course-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.faculty-attendance-table td small {
+    color: #888;
+    font-size: 11px;
+}
+
+
+/* Present / Absent buttons */
+
+.faculty-attendance-actions {
+    white-space: nowrap;
+}
+
+.faculty-attendance-inline-form {
+    display: flex;
+    gap: 7px;
+}
+
+.faculty-attendance-present-btn,
+.faculty-attendance-absent-btn {
+    min-width: 88px;
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.faculty-attendance-present-btn {
+    border: 1px solid #bde5ca;
+    background: #f1fbf4;
+    color: #258443;
+}
+
+.faculty-attendance-present-btn:hover,
+.faculty-attendance-present-btn.active {
+    background: #2e9b50;
+    border-color: #2e9b50;
+    color: #ffffff;
+}
+
+.faculty-attendance-absent-btn {
+    border: 1px solid #f0c4c4;
+    background: #fff5f5;
+    color: #c43d3d;
+}
+
+.faculty-attendance-absent-btn:hover,
+.faculty-attendance-absent-btn.active {
+    background: #d95353;
+    border-color: #d95353;
+    color: #ffffff;
+}
+
+
+/* Attendance status */
+
+.faculty-attendance-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.faculty-attendance-status.present {
+    background: #eaf8ee;
+    color: #258443;
+}
+
+.faculty-attendance-status.absent {
+    background: #fff0f0;
+    color: #c43d3d;
+}
+
+.faculty-attendance-status.not-marked {
+    background: #f1f2f4;
+    color: #777;
+}
+
+
+/* Empty state */
+
+.faculty-attendance-empty {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.faculty-attendance-empty-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1ff;
+    color: #6c63ff;
+    font-size: 27px;
+}
+
+.faculty-attendance-empty h5 {
+    margin-bottom: 7px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+}
+
+.faculty-attendance-empty p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* Alert */
+
+.faculty-alert {
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.faculty-alert i {
+    margin-right: 7px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 992px) {
+
+    .faculty-attendance-filter-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .faculty-attendance-filter-action {
+        grid-column: 1 / -1;
+    }
+
+    .faculty-attendance-load-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .faculty-attendance-filter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-attendance-filter-action {
+        grid-column: auto;
+    }
+
+    .faculty-attendance-course-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .faculty-attendance-course-meta {
+        padding-left: 63px;
+    }
+
+    .faculty-attendance-table thead th,
+    .faculty-attendance-table tbody td {
+        padding: 12px;
+    }
+
+    .faculty-attendance-inline-form {
+        flex-direction: column;
+    }
+
+    .faculty-attendance-present-btn,
+    .faculty-attendance-absent-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .faculty-attendance-filter-card,
+    .faculty-attendance-course-card {
+        padding: 17px;
+    }
+
+    .faculty-attendance-table-header {
+        padding: 17px;
+    }
+
+    .faculty-attendance-course-info h4 {
+        font-size: 16px;
     }
 
 }

@@ -4,8 +4,8 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 
 import org.giritechhub.model.User;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -75,7 +75,22 @@ public class UserRepository {
                     email
             );
 
+        } catch (EmptyResultDataAccessException e) {
+
+            System.out.println(
+                    "No user found with email: " + email
+            );
+
+            return null;
+
         } catch (Exception e) {
+
+            System.out.println(
+                    "ERROR while finding user by email: "
+                    + email
+            );
+
+            e.printStackTrace();
 
             return null;
         }
@@ -125,21 +140,8 @@ public class UserRepository {
                 VALUES (?, ?, ?, 'ACTIVE')
                 """;
 
-
-        /*
-         * GeneratedKeyHolder gets the actual auto-generated
-         * user_id from this INSERT operation.
-         *
-         * This is safer than running:
-         *
-         * SELECT LAST_INSERT_ID()
-         *
-         * as a separate JdbcTemplate operation.
-         */
-
         KeyHolder keyHolder =
                 new GeneratedKeyHolder();
-
 
         jdbcTemplate.update(connection -> {
 
@@ -168,10 +170,8 @@ public class UserRepository {
 
         }, keyHolder);
 
-
         Number generatedKey =
                 keyHolder.getKey();
-
 
         if (generatedKey == null) {
 
@@ -179,7 +179,6 @@ public class UserRepository {
                     "Unable to create user. User ID was not generated."
             );
         }
-
 
         return generatedKey.intValue();
     }
@@ -201,5 +200,4 @@ public class UserRepository {
                 userId
         );
     }
-
 }

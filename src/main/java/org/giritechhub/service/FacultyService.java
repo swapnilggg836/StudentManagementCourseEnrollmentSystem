@@ -26,7 +26,7 @@ public class FacultyService {
 
 
     // =========================================================
-    // GET ALL
+    // ADMIN - GET ALL FACULTY
     // =========================================================
 
     public List<Faculty> getAllFaculty() {
@@ -36,7 +36,8 @@ public class FacultyService {
 
 
     // =========================================================
-    // GET BY ID
+    // GET FACULTY BY ID
+    // Used by Admin and other Faculty operations
     // =========================================================
 
     public Faculty getFacultyById(int facultyId) {
@@ -50,7 +51,42 @@ public class FacultyService {
 
 
     // =========================================================
-    // SEARCH
+    // GET FACULTY BY USER ID
+    // Used for logged-in Faculty
+    // =========================================================
+
+    public Faculty getFacultyByUserId(int userId) {
+
+        if (userId <= 0) {
+            return null;
+        }
+
+        return facultyRepository.findByUserId(userId);
+    }
+
+
+    // =========================================================
+    // GET LOGGED-IN FACULTY
+    // =========================================================
+
+    public Faculty getLoggedInFaculty(int userId) {
+
+        Faculty faculty =
+                getFacultyByUserId(userId);
+
+        if (faculty == null) {
+
+            throw new IllegalArgumentException(
+                    "Faculty profile not found."
+            );
+        }
+
+        return faculty;
+    }
+
+
+    // =========================================================
+    // ADMIN - SEARCH FACULTY
     // =========================================================
 
     public List<Faculty> searchFaculty(String keyword) {
@@ -68,7 +104,7 @@ public class FacultyService {
 
 
     // =========================================================
-    // ADD FACULTY
+    // ADMIN - ADD FACULTY
     // =========================================================
 
     @Transactional
@@ -132,7 +168,7 @@ public class FacultyService {
 
 
     // =========================================================
-    // UPDATE FACULTY
+    // ADMIN - UPDATE FACULTY
     // =========================================================
 
     public boolean updateFaculty(Faculty faculty) {
@@ -178,7 +214,7 @@ public class FacultyService {
 
 
     // =========================================================
-    // DELETE FACULTY
+    // ADMIN - DELETE FACULTY
     // =========================================================
 
     @Transactional
@@ -286,6 +322,7 @@ public class FacultyService {
                 faculty.getLastName().trim()
         );
 
+
         if (faculty.getDesignation() != null) {
 
             faculty.setDesignation(
@@ -293,12 +330,14 @@ public class FacultyService {
             );
         }
 
+
         if (faculty.getPhone() != null) {
 
             faculty.setPhone(
                     faculty.getPhone().trim()
             );
         }
+
 
         if (faculty.getQualification() != null) {
 

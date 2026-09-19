@@ -119,6 +119,61 @@ public class FacultyRepository {
 
 
     // =========================================================
+    // FIND FACULTY BY USER ID
+    // Used for logged-in Faculty
+    // =========================================================
+
+    public Faculty findByUserId(int userId) {
+
+        String sql = """
+                SELECT
+                    f.faculty_id,
+                    f.user_id,
+                    f.employee_code,
+                    f.first_name,
+                    f.last_name,
+                    f.dept_id,
+                    d.dept_name,
+                    d.dept_code,
+                    u.email,
+                    u.status,
+                    f.designation,
+                    f.phone,
+                    f.qualification,
+
+                    (
+                        SELECT COUNT(*)
+                        FROM courses c
+                        WHERE c.faculty_id = f.faculty_id
+                    ) AS assigned_courses
+
+                FROM faculty f
+
+                LEFT JOIN departments d
+                    ON f.dept_id = d.dept_id
+
+                LEFT JOIN users u
+                    ON f.user_id = u.user_id
+
+                WHERE f.user_id = ?
+                """;
+
+        List<Faculty> faculty =
+                jdbcTemplate.query(
+                        sql,
+                        new FacultyRowMapper(),
+                        userId
+                );
+
+        if (faculty.isEmpty()) {
+            return null;
+        }
+
+        return faculty.get(0);
+    }
+
+
+    // =========================================================
     // SEARCH FACULTY
     // =========================================================
 
